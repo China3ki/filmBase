@@ -1,0 +1,3 @@
+console.log('a');
+const number = 2;
+console.log(number);
