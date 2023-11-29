@@ -1,3 +1,3 @@
-console.log('a');
-const number: number = 2;
-console.log(number);
+import { changeNavigation } from '../resize.js';
+window.addEventListener('load', changeNavigation);
+window.addEventListener('resize', changeNavigation);

@@ -9,10 +9,94 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
     />
-    <script src="js/index/index.js"></script>
+    <script type="module" src="js/index/index.js" defer></script>
   </head>
   <body>
-    <header class="header--mobile">
+    <header class="header header--desktop">
+      <a href="#"><h1 class="header__title">FilmBase</h1></a>
+      <form class="header__search" action="">
+        <button class="material-symbols-outlined header__submit">search</button>
+        <input type="text" class="header__input" id="" name="" placeholder="Wyszukaj" />
+      </form>
+      <div class="header__icons">
+        <div class="icon__set">
+          <span class="material-symbols-outlined header__icon header__icon--login"> person </span>
+          <span class="icon__caption">Zaloguj się</span>
+        </div>
+      </div>
+    </header>
+    <nav class="nav nav--desktop">
+      <ul class="nav__list">
+        <li class="list__element">
+          <span class="list__unwind">Filmy</span>
+          <div class="list__wind">
+            <ul class="list__category">
+              <li><a class="list__link" href="">Nowości</a></li>
+              <li><a class="list__link" href="">Filmy</a></li>
+              <li><a class="list__link" href="">Aktorzy</a></li>
+              <li><a class="list__link" href="">Newsy</a></li>
+            </ul>
+            <div class="list__news">
+              <h2 class="list__title">Nowości:</h2>
+              <div class="all__news">
+                <div class="news">
+                  <img src="images/img.jpg" alt="Avengers" />
+                  <span>Avengers</span>
+                </div>
+                <div class="news">
+                  <img src="images/img.jpg" alt="Avengers" />
+                  <span>Avengers</span>
+                </div>
+                <div class="news">
+                  <img src="images/img.jpg" alt="Avengers" />
+                  <span>Avengers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="list__element">
+          <span class="list__unwind">Seriale</span>
+          <div class="list__wind">
+            <ul class="list__category">
+              <li><a class="list__link" href="">Nowości</a></li>
+              <li><a class="list__link" href="">Filmy</a></li>
+              <li><a class="list__link" href="">Aktorzy</a></li>
+              <li><a class="list__link" href="">Newsy</a></li>
+            </ul>
+            <div class="list__news">
+              <h2 class="list__title">Nowości:</h2>
+              <div class="all__news">
+                <div class="news">
+                  <img src="images/img.jpg" alt="Avengers" />
+                  <span>Avengers</span>
+                </div>
+                <div class="news">
+                  <img src="images/img.jpg" alt="Avengers" />
+                  <span>Avengers</span>
+                </div>
+                <div class="news">
+                  <img src="images/img.jpg" alt="Avengers" />
+                  <span>Avengers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="list__element">
+          <span class="list__unwind">Artykuły</span>
+          <div class="list__wind">
+            <ul class="list__category">
+              <li><a class="list__link" href="">Nowości</a></li>
+              <li><a class="list__link" href="">Filmy</a></li>
+              <li><a class="list__link" href="">Aktorzy</a></li>
+              <li><a class="list__link" href="">Newsy</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <header class="header header--mobile">
       <a href="#"><h1 class="header__title">FilmBase</h1></a>
       <div class="header__icons">
         <div class="icon__set">
@@ -30,14 +114,61 @@
       </div>
     </header>
     <main class="content">
-      <article class="article article--main">
-        <img src="images/img.jpg" alt="Avengers" class="article__image" />
-        <div class="article__content">
-          <h1 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h1>
-          <span class="article__time">czas przeczytania: 2min</span>
-        </div>
-      </article>
-      <article></article>
+      <section class="articles">
+        <article class="article article--main">
+          <img src="images/img.jpg" alt="Avengers" class="article__image" />
+          <div class="article__content">
+            <h1 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h1>
+            <span class="article__time">czas przeczytania: 2min</span>
+          </div>
+        </article>
+        <aside class="articles__secondary">
+          <article class="article article--secondary">
+            <img src="images/img.jpg" alt="Avengers" class="article__image" />
+            <div class="article__content">
+              <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
+              <span class="article__time">czas przeczytania: 2min</span>
+            </div>
+          </article>
+          <article class="article article--secondary">
+            <img src="images/img.jpg" alt="Avengers" class="article__image" />
+            <div class="article__content">
+              <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
+              <span class="article__time">czas przeczytania: 2min</span>
+            </div>
+          </article>
+          <article class="article article--secondary article--widther">
+            <img src="images/img.jpg" alt="Avengers" class="article__image" />
+            <div class="article__content">
+              <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
+              <span class="article__time">czas przeczytania: 2min</span>
+            </div>
+          </article>
+        </aside>
+        <aside class="articles__bottom">
+          <article class="article article--bottom">
+            <img src="images/img.jpg" alt="Avengers" class="article__image" />
+            <div class="article__content">
+              <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
+              <span class="article__time">czas przeczytania: 2min</span>
+            </div>
+          </article>
+          <article class="article article--bottom">
+            <img src="images/img.jpg" alt="Avengers" class="article__image" />
+            <div class="article__content">
+              <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
+              <span class="article__time">czas przeczytania: 2min</span>
+            </div>
+          </article>
+          <article class="article article--bottom">
+            <img src="images/img.jpg" alt="Avengers" class="article__image" />
+            <div class="article__content">
+              <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
+              <span class="article__time">czas przeczytania: 2min</span>
+            </div>
+          </article>
+        </aside>
+      </section>
     </main>
   </body>
 </html>
