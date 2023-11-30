@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,94 +12,22 @@
     <script type="module" src="js/index/index.js" defer></script>
   </head>
   <body>
-    <header class="header header--desktop">
+    <div class="theme">
+      <span class="theme__badge">Theme mode</span>
+    </div>
+    <header class="header">
+      <div class="icon__set icon__set--menu">
+        <span class="material-symbols-outlined header__icon header__icon--menu"> menu </span>
+        <span class="icon__caption icon__caption_">Menu</span>
+      </div>
       <a href="#"><h1 class="header__title">FilmBase</h1></a>
       <form class="header__search" action="">
         <button class="material-symbols-outlined header__submit">search</button>
         <input type="text" class="header__input" id="" name="" placeholder="Wyszukaj" />
+        <span class="material-symbols-outlined header__icon--close"> close </span>
       </form>
       <div class="header__icons">
-        <div class="icon__set">
-          <span class="material-symbols-outlined header__icon header__icon--login"> person </span>
-          <span class="icon__caption">Zaloguj się</span>
-        </div>
-      </div>
-    </header>
-    <nav class="nav nav--desktop">
-      <ul class="nav__list">
-        <li class="list__element">
-          <span class="list__unwind">Filmy</span>
-          <div class="list__wind">
-            <ul class="list__category">
-              <li><a class="list__link" href="">Nowości</a></li>
-              <li><a class="list__link" href="">Filmy</a></li>
-              <li><a class="list__link" href="">Aktorzy</a></li>
-              <li><a class="list__link" href="">Newsy</a></li>
-            </ul>
-            <div class="list__news">
-              <h2 class="list__title">Nowości:</h2>
-              <div class="all__news">
-                <div class="news">
-                  <img src="images/img.jpg" alt="Avengers" />
-                  <span>Avengers</span>
-                </div>
-                <div class="news">
-                  <img src="images/img.jpg" alt="Avengers" />
-                  <span>Avengers</span>
-                </div>
-                <div class="news">
-                  <img src="images/img.jpg" alt="Avengers" />
-                  <span>Avengers</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="list__element">
-          <span class="list__unwind">Seriale</span>
-          <div class="list__wind">
-            <ul class="list__category">
-              <li><a class="list__link" href="">Nowości</a></li>
-              <li><a class="list__link" href="">Filmy</a></li>
-              <li><a class="list__link" href="">Aktorzy</a></li>
-              <li><a class="list__link" href="">Newsy</a></li>
-            </ul>
-            <div class="list__news">
-              <h2 class="list__title">Nowości:</h2>
-              <div class="all__news">
-                <div class="news">
-                  <img src="images/img.jpg" alt="Avengers" />
-                  <span>Avengers</span>
-                </div>
-                <div class="news">
-                  <img src="images/img.jpg" alt="Avengers" />
-                  <span>Avengers</span>
-                </div>
-                <div class="news">
-                  <img src="images/img.jpg" alt="Avengers" />
-                  <span>Avengers</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="list__element">
-          <span class="list__unwind">Artykuły</span>
-          <div class="list__wind">
-            <ul class="list__category">
-              <li><a class="list__link" href="">Nowości</a></li>
-              <li><a class="list__link" href="">Filmy</a></li>
-              <li><a class="list__link" href="">Aktorzy</a></li>
-              <li><a class="list__link" href="">Newsy</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </nav>
-    <header class="header header--mobile">
-      <a href="#"><h1 class="header__title">FilmBase</h1></a>
-      <div class="header__icons">
-        <div class="icon__set">
+        <div class="icon__set icon__set--search">
           <span class="material-symbols-outlined header__icon header__icon--search"> search </span>
           <span class="icon__caption">Wyszukaj</span>
         </div>
@@ -107,12 +35,119 @@
           <span class="material-symbols-outlined header__icon header__icon--login"> person </span>
           <span class="icon__caption">Zaloguj się</span>
         </div>
-        <div class="icon__set">
-          <span class="material-symbols-outlined header__icon header__icon--menu"> menu </span>
-          <span class="icon__caption">Menu</span>
-        </div>
       </div>
     </header>
+    <nav class="menu">
+      <div class="menu__panel">
+        <div class="menu__header">
+          <h2 class="menu__title">Menu</h2>
+          <span class="material-symbols-outlined menu__icon--close"> close </span>
+        </div>
+        <ul class="menu__list">
+          <li class="list">
+            <div class="list__unwind">
+              <span class="list__category">Filmy</span
+              ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+            </div>
+            <div class="menu__panel menu__panel--sub">
+              <div class="menu__header">
+                <div class="menu__back">
+                  <span class="material-symbols-outlined menu__icon--back"> arrow_back </span>
+                  <h2 class="menu__title">Filmy</h2>
+                </div>
+                <span class="material-symbols-outlined menu__icon--close"> close </span>
+              </div>
+              <ul class="menu__list">
+                <li class="list">
+                  <div class="list__unwind">
+                    <span class="list__category">Filmowe premiery</span
+                    ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list__unwind">
+                    <span class="list__category">Baza filmów</span
+                    ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list__unwind">
+                    <span class="list__category">Baza aktorów</span
+                    ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="list">
+            <div class="list__unwind">
+              <span class="list__category">Seriale</span
+              ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+            </div>
+            <div class="menu__panel menu__panel--sub">
+              <div class="menu__header">
+                <div class="menu__back">
+                  <span class="material-symbols-outlined menu__icon--back"> arrow_back </span>
+                  <h2 class="menu__title">Seriale</h2>
+                </div>
+
+                <span class="material-symbols-outlined menu__icon--close"> close </span>
+              </div>
+              <ul class="menu__list">
+                <li class="list">
+                  <div class="list__unwind">
+                    <span class="list__category">Serialowe premiery</span
+                    ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list__unwind">
+                    <span class="list__category">Baza seriali</span
+                    ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="list">
+            <div class="list__unwind">
+              <span class="list__category">Artykuły</span
+              ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+            </div>
+            <div class="menu__panel menu__panel--sub">
+              <div class="menu__header">
+                <div class="menu__back">
+                  <span class="material-symbols-outlined menu__icon--back"> arrow_back </span>
+                  <h2 class="menu__title">Artykuły</h2>
+                </div>
+                <span class="material-symbols-outlined menu__icon--close"> close </span>
+              </div>
+              <ul class="menu__list">
+                <li class="list">
+                  <div class="list__unwind">
+                    <span class="list__category">Najnowsze wieści</span
+                    ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list__unwind">
+                    <span class="list__category">Plotki</span
+                    ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="list__unwind">
+                    <span class="list__category">Felietony</span
+                    ><span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--  -->
+    </nav>
     <main class="content">
       <section class="articles">
         <article class="article article--main">

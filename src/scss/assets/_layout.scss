@@ -11,3 +11,37 @@ a {
     color: initial;
 }
 
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: all .4s;
+}
+.theme {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    // border: 2px solid
+    background-color: var(--color-text);
+    color:  var(--color-background);
+    font-weight: bolder;
+    top:100px;
+    left: 0;
+    transform: translate(0%);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 0px 25px 25px 0px;
+    z-index: 2;
+    user-select: none;
+    transition: all .4s;
+    cursor: pointer;
+    .theme__badge {
+        writing-mode: vertical-rl;
+        font-size: 17px;
+       
+    }
+}
+.theme:hover {
+    background-color: var(--color-background) ;
+    color:var(--color-text);
+}
