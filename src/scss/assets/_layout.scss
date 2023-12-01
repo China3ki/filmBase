@@ -1,47 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,700;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,700;1,700;1,900&display=swap");
 * {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 500;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
 }
 
 a {
-    text-decoration: none;
-    color: initial;
+  text-decoration: none;
+  color: initial;
 }
-
 
 body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    transition: all .4s;
+  height: 300vh;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  overflow-x: hidden;
+  transition: all 0.4s;
 }
 .theme {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    // border: 2px solid
-    background-color: var(--color-text);
-    color:  var(--color-background);
-    font-weight: bolder;
-    top:100px;
-    left: 0;
-    transform: translate(0%);
-    padding: 10px;
-    width: fit-content;
-    border-radius: 0px 25px 25px 0px;
-    z-index: 2;
-    user-select: none;
-    transition: all .4s;
-    cursor: pointer;
-    .theme__badge {
-        writing-mode: vertical-rl;
-        font-size: 17px;
-       
-    }
+  position: fixed;
+  display: flex;
+  align-items: center;
+  // border: 2px solid
+  background-color: var(--color-text);
+  color: var(--color-background);
+  font-weight: bolder;
+  top: 100px;
+  left: 0;
+  transform: translate(0%);
+  padding: 10px;
+  width: fit-content;
+  border-radius: 0px 25px 25px 0px;
+  z-index: 2;
+  user-select: none;
+  transition: all 0.4s;
+  cursor: pointer;
+  .theme__badge {
+    writing-mode: vertical-rl;
+    font-size: 17px;
+  }
 }
 .theme:hover {
-    background-color: var(--color-background) ;
-    color:var(--color-text);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
