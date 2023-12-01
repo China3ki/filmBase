@@ -29,6 +29,7 @@
             border-left: none;
             background-color: var(--color-background);
             color: var(--color-text);
+            transition: all .4s;
         }
         .header__input:focus {
             outline: none;
@@ -37,6 +38,7 @@
             border: none;
             background-color: var(--color-background);
             color: $secondory-color;
+            transition: all .4s;
             cursor: pointer;
         }
         .header__icon--close {
@@ -102,7 +104,6 @@
             .header__submit {
                 border: 2px solid var(--color-text);
                 border-right: none;
-                background-color: transparent;
                 color: $secondory-color;
             }
             .header__icon--close {

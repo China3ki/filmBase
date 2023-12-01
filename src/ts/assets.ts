@@ -1,4 +1,4 @@
-export const showElements = (e: Event) => {
+const showElements = (e: Event) => {
   const target = e.target as Element;
   const form: HTMLElement = document.querySelector('.header__search');
   const menu: HTMLElement = document.querySelector('.menu');
@@ -24,18 +24,34 @@ export const showElements = (e: Event) => {
   }
 };
 
-export const nextMenu = (e: Event) => {
+const nextMenu = (e: Event) => {
   const target = e.currentTarget as Element;
   target.parentElement.querySelector('.menu__panel--sub').classList.add('show');
 };
-export const previousMenu = (e: Event) => {
+const previousMenu = (e: Event) => {
   const target = e.currentTarget as Element;
   target.parentElement.parentElement.parentElement
     .querySelector('.menu__panel--sub')
     .classList.remove('show');
 };
-export const changeTheme = () => {
+const changeTheme = () => {
   const theme: string = document.documentElement.dataset.theme;
   console.log(theme);
   document.documentElement.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light');
 };
+
+document.querySelector('body').addEventListener('click', showElements);
+document.querySelector('body').addEventListener('touchend', showElements);
+document
+  .querySelectorAll('.list__unwind')
+  .forEach((list) => list.addEventListener('click', nextMenu));
+document
+  .querySelectorAll('.list__unwind')
+  .forEach((list) => list.addEventListener('touchend', nextMenu));
+document
+  .querySelectorAll('.menu__back')
+  .forEach((list) => list.addEventListener('click', previousMenu));
+document
+  .querySelectorAll('.menu__back')
+  .forEach((list) => list.addEventListener('touchend', previousMenu));
+document.querySelector('.theme').addEventListener('click', changeTheme);
