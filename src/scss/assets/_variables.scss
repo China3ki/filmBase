@@ -1,17 +1,16 @@
+$main-color: #5e7ff5;
+$secondory-color: #9e5df5;
+$accent-color: #5ddef5;
 
-$main-color: #5E7FF5;
-$secondory-color:#9E5DF5;
-$accent-color:#5DDEF5;
-
-html[data-theme=dark] {
-    --color-background: #{#0F0F0F};
-    --color-text: #{white};
-    --color-textRGB: #{255,255,255};
-    --color-backgroundRGB: #{15, 15, 15};
+html[data-theme='dark'] {
+  --color-background: #{#0f0f0f};
+  --color-text: #{white};
+  --color-textRGB: #{255, 255, 255};
+  --color-backgroundRGB: #{15, 15, 15};
 }
-html[data-theme=light] {
-    --color-background: #{white};
-    --color-text: #{#0F0F0F};
-    --color-backgroundrRGB: #{255,255,255};
-    --color-textRGB: #{15, 15, 15};
+html[data-theme='light'] {
+  --color-background: #{white};
+  --color-text: #{#0f0f0f};
+  --color-backgroundrRGB: #{255, 255, 255};
+  --color-textRGB: #{15, 15, 15};
 }
