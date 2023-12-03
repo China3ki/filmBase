@@ -13,6 +13,131 @@ html[data-theme=light] {
   --color-textRGB: 15, 15, 15;
 }
 
+.account {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  height: 100%;
+  width: 100%;
+  right: 0;
+  z-index: 3;
+  transition: width 0.4s;
+  box-shadow: 0px 0px 22px 16px rgb(66, 68, 90);
+}
+.account .account__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 25px;
+}
+.account .account__header .account__icon--close {
+  font-size: 45px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.account .account__header .account__icon--close:hover {
+  color: #9e5df5;
+}
+.account .account__main {
+  position: relative;
+}
+.account .account__main .account__background {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.account .account__main .account__info {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+}
+.account .account__main .account__info .account__details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.account .account__main .account__info .account__details .account__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.account .account__main .account__info .account__details .account__data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.account .account__main .account__info .account__details .account__data .account__name {
+  font-size: 30px;
+  color: #9e5df5;
+}
+.account .account__main .account__info .account__details .account__data .account__nickname {
+  font-size: 20px;
+  color: white;
+}
+.account .account__main .account__info .account__details .account__data .account__observe {
+  color: rgba(255, 255, 255, 0.7);
+}
+.account .account__main .account__info .account__desc {
+  color: white;
+  text-align: center;
+  font-weight: 400;
+}
+.account .account__stats {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 2px solid var(--color-text);
+}
+.account .account__stats .account__stat {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  cursor: pointer;
+}
+.account .account__stats .account__stat .stat__name {
+  font-size: 16px;
+}
+.account .account__stats .account__stat .stat__number {
+  color: #9e5df5;
+  font-size: 20px;
+}
+.account .account__options .account__option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid var(--color-text);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.account .account__options .account__option:hover {
+  color: #9e5df5;
+}
+
+@media (min-width: 768px) {
+  .account {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .account {
+    width: 30%;
+  }
+}
 .header {
   position: relative;
   display: flex;
@@ -327,13 +452,13 @@ html[data-theme=light] {
   align-items: center;
   flex-direction: column;
   gap: 5px;
+  cursor: pointer;
 }
 .footer .footer__wrapper .logos .logos__set .logos__logo {
   font-size: 40px;
   transition: color 0.2s;
-  cursor: pointer;
 }
-.footer .footer__wrapper .logos .logos__set .logos__logo:hover {
+.footer .footer__wrapper .logos .logos__set:hover {
   color: #9e5df5;
 }
 .footer .footer__wrapper .copyright {
@@ -344,9 +469,11 @@ html[data-theme=light] {
 
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Barlow", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 a {

@@ -57,14 +57,14 @@
         align-items: center;
         flex-direction: column;
         gap: 5px;
+        cursor: pointer;
         .logos__logo {
           font-size: 40px;
           transition: color 0.2s;
-          cursor: pointer;
         }
-        .logos__logo:hover {
-          color: $secondory-color;
-        }
+      }
+      .logos__set:hover {
+        color: $secondory-color;
       }
     }
     .copyright {
