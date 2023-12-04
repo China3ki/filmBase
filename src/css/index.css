@@ -523,6 +523,7 @@ body {
 .content .articles .article {
   display: flex;
   position: relative;
+  max-height: 400px;
   overflow: hidden;
   cursor: pointer;
 }
