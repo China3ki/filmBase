@@ -1,4 +1,5 @@
 <?php require("inc/index/index.inc.php") ?>
+
 <!DOCTYPE html>
 <html lang="pl" data-theme="dark">
 
@@ -8,8 +9,8 @@
   <title>FilmBase</title>
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script type="module" src="js/index/index.js" defer></script>
-  <script src="js/assets.js" defer></script>
+  <script src="js/index/index.js" defer></script>
+  <script type="module" src="js/assets/assets.js" defer></script>
   <script src="https://kit.fontawesome.com/e348b353f1.js" crossorigin="anonymous"></script>
 </head>
 
@@ -18,66 +19,90 @@
     <span class="theme__badge">Tryb ciemny</span>
   </div>
   <!-- <div class="account">
-      <div class="account__header">
-        <h2 class="account__title">Konto</h2>
-        <span class="material-symbols-outlined account__icon--close"> close </span>
-      </div>
-      <div class="account__main">
-        <img src="images/963699.jpg" alt="" class="account__background" />
-        <div class="account__info">
-          <div class="account__details">
-            <img src="images/pobrane.jpg" alt="" class="account__avatar" />
-            <div class="account__data">
-              <span class="account__name">Jan Kowalski</span>
-              <span class="account__nickname">China3ki</span>
-              <span class="account__observe">Obserwacje: 20</span>
-            </div>
+    <div class="account__header">
+      <h2 class="account__title">Konto</h2>
+      <span class="material-symbols-outlined account__icon--close"> close </span>
+    </div>
+    <div class="account__main">
+      <img src="images/963699.jpg" alt="" class="account__background" />
+      <div class="account__info">
+        <div class="account__details">
+          <img src="images/pobrane.jpg" alt="" class="account__avatar" />
+          <div class="account__data">
+            <span class="account__name">Jan Kowalski</span>
+            <span class="account__nickname">China3ki</span>
+            <span class="account__observe">Obserwacje: 20</span>
           </div>
-          <span class="account__desc"
-            >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro repudiandae eveniet
-            aliquid amet possimus quis veniam obcaecati cupiditate itaque aperiam tempora, voluptate
-            hic? Sit minus similique animi sint. Inventore, possimus!</span
-          >
         </div>
+        <span class="account__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro repudiandae eveniet
+          aliquid amet possimus quis veniam obcaecati cupiditate itaque aperiam tempora, voluptate
+          hic? Sit minus similique animi sint. Inventore, possimus!</span>
       </div>
-      <ul class="account__stats">
-        <li class="account__stat">
-          <span class="stat__name">Oceny</span> <span class="stat__number">20</span>
-        </li>
-        <li class="account__stat">
-          <span class="stat__name">Obserwujesz</span> <span class="stat__number">20</span>
-        </li>
-        <li class="account__stat">
-          <span class="stat__name">Polubienia</span> <span class="stat__number">20</span>
-        </li>
-        <li class="account__stat">
-          <span class="stat__name">Chcę obejrzeć</span> <span class="stat__number">20</span>
-        </li>
-      </ul>
-      <ul class="account__options">
-        <li class="account__option">
-          Dane osobowe<span class="material-symbols-outlined menu__icon--next">
-            arrow_forward
+    </div>
+    <ul class="account__stats">
+      <li class="account__stat">
+        <span class="stat__name">Oceny</span> <span class="stat__number">20</span>
+      </li>
+      <li class="account__stat">
+        <span class="stat__name">Obserwujesz</span> <span class="stat__number">20</span>
+      </li>
+      <li class="account__stat">
+        <span class="stat__name">Polubienia</span> <span class="stat__number">20</span>
+      </li>
+      <li class="account__stat">
+        <span class="stat__name">Chcę obejrzeć</span> <span class="stat__number">20</span>
+      </li>
+    </ul>
+    <ul class="account__options">
+      <li class="account__option">
+        Dane osobowe<span class="material-symbols-outlined menu__icon--next">
+          arrow_forward
+        </span>
+      </li>
+      <li class="account__option">
+        Ustawienia konta
+        <span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
+      </li>
+      <li class="account__option">
+        Wyloguj <span class="material-symbols-outlined"> logout </span>
+      </li>
+    </ul>
+  </div> -->
+  <div class="account account--nonlogged">
+    <div class="account__header">
+      <h2 class="account__title">Konto</h2>
+      <span class="material-symbols-outlined account__icon--close"> close </span>
+    </div>
+    <div class="account__main">
+      <div class="account__info">
+        <div class="account__details">
+          <span class="material-symbols-outlined account__icon">
+            account_circle
           </span>
-        </li>
-        <li class="account__option">
-          Ustawienia konta
-          <span class="material-symbols-outlined menu__icon--next"> arrow_forward </span>
-        </li>
-        <li class="account__option">
-          Wyloguj <span class="material-symbols-outlined"> logout </span>
-        </li>
-      </ul>
-    </div> -->
+        </div>
+        <span class="account__desc">Niezalogowany</span>
+      </div>
+    </div>
+    <ul class="account__options">
+      <li class="account__option">
+        Zaloguj się<span class="material-symbols-outlined menu__icon--next">
+          login
+        </span>
+      </li>
+      <li class="account__option">
+        Zarejestruj się<span class="material-symbols-outlined"> app_registration </span>
+      </li>
+    </ul>
+  </div>
   <header class="header">
     <div class="icon__set icon__set--menu">
       <span class="material-symbols-outlined header__icon header__icon--menu"> menu </span>
       <span class="icon__caption icon__caption_">Menu</span>
     </div>
     <h1><a href="#" class="header__title">FilmBase</a></h1>
-    <form class="header__search" action="">
+    <form class="header__search">
       <button class="material-symbols-outlined header__submit">search</button>
-      <input type="text" class="header__input" id="" name="" placeholder="Wyszukaj" />
+      <input type="text" class="header__input" placeholder="Wyszukaj" />
       <span class="material-symbols-outlined header__icon--close"> close </span>
     </form>
     <div class="header__icons">
@@ -85,12 +110,44 @@
         <span class="material-symbols-outlined header__icon header__icon--search"> search </span>
         <span class="icon__caption">Wyszukaj</span>
       </div>
-      <div class="icon__set">
+      <div class="icon__set icon__set--login">
         <span class="material-symbols-outlined header__icon header__icon--login"> person </span>
         <span class="icon__caption">Zaloguj się</span>
+
       </div>
     </div>
   </header>
+  <div class="search">
+    <form class="search__form">
+      <div class="search__main">
+        <a href="#" class="material-symbols-outlined search__button">search</a>
+        <input type="text" class="search__input" placeholder="Wyszukaj">
+      </div>
+      <button class="search__close">Anuluj</button>
+    </form>
+    <div class="search__results">
+      <div class="search__result">
+        <img src="images/img2.jpg" alt="" class="result__image">
+        <div class="result__info">
+          <div class="result__production">
+            <span class="result__name">Avengers: Wojna totalna</span>
+            <span class="result__year">2010</span>
+          </div>
+          <span class="result__actors">Andrzej Duda</span>
+        </div>
+      </div>
+      <div class="search__result">
+        <img src="images/img2.jpg" alt="" class="result__image">
+        <div class="result__info">
+          <div class="result__production">
+            <span class="result__name">Avengers: Wojna totalna</span>
+            <span class="result__year">2010</span>
+          </div>
+          <span class="result__actors">Andrzej Duda</span>
+        </div>
+      </div>
+    </div>
+  </div>
   <nav class="menu">
     <div class="menu__panel">
       <div class="menu__header">
@@ -191,60 +248,7 @@
   </nav>
   <main class="content">
     <section class="articles">
-      <article class="article article--main">
-
-        <img src="images/img.jpg" alt="Avengers" class="article__image" />
-        <div class="article__content">
-          <h1 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h1>
-          <span class="article__time">czas przeczytania: 2min</span>
-        </div>
-      </article>
-      <aside class="articles__secondary">
-        <article class="article article--secondary">
-          <img src="images/img.jpg" alt="Avengers" class="article__image" />
-          <div class="article__content">
-            <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
-            <span class="article__time">czas przeczytania: 2min</span>
-          </div>
-        </article>
-        <article class="article article--secondary">
-          <img src="images/img.jpg" alt="Avengers" class="article__image" />
-          <div class="article__content">
-            <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
-            <span class="article__time">czas przeczytania: 2min</span>
-          </div>
-        </article>
-        <article class="article article--secondary article--widther">
-          <img src="images/img.jpg" alt="Avengers" class="article__image" />
-          <div class="article__content">
-            <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
-            <span class="article__time">czas przeczytania: 2min</span>
-          </div>
-        </article>
-      </aside>
-      <aside class="articles__bottom">
-        <article class="article article--bottom">
-          <img src="images/img.jpg" alt="Avengers" class="article__image" />
-          <div class="article__content">
-            <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
-            <span class="article__time">czas przeczytania: 2min</span>
-          </div>
-        </article>
-        <article class="article article--bottom">
-          <img src="images/img.jpg" alt="Avengers" class="article__image" />
-          <div class="article__content">
-            <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
-            <span class="article__time">czas przeczytania: 2min</span>
-          </div>
-        </article>
-        <article class="article article--bottom">
-          <img src="images/img.jpg" alt="Avengers" class="article__image" />
-          <div class="article__content">
-            <h2 class="article__title">Avengers: Wojna totalna - Najlepszym filmem 2019 roku?</h2>
-            <span class="article__time">czas przeczytania: 2min</span>
-          </div>
-        </article>
-      </aside>
+      <?php $mainInstance->excecuteQuery("articlesMain") ?>
     </section>
     <section class="news">
       <h1 class="news__title">Newsy</h1>
@@ -254,271 +258,34 @@
         <li><button class="news__category">Seriale</button></li>
       </ul>
       <div class="articles--news">
-        <article class="article--news">
-          <img src="images/img.jpg" alt="" class="article__image--news" />
-          <div class="article__content--news">
-            <h2 class="article__title--news">
-              Avengers: Wojna totalna - Najlepszym filmem 2019 roku?
-            </h2>
-            <span class="article__time--news">czas przeczytania: 2min</span>
-          </div>
-        </article>
-        <article class="article--news">
-          <img src="images/img.jpg" alt="" class="article__image--news" />
-          <div class="article__content--news">
-            <h2 class="article__title--news">
-              Avengers: Wojna totalna - Najlepszym filmem 2019 roku?
-            </h2>
-            <span class="article__time--news">czas przeczytania: 2min</span>
-          </div>
-        </article>
-        <article class="article--news">
-          <img src="images/img.jpg" alt="" class="article__image--news" />
-          <div class="article__content--news">
-            <h2 class="article__title--news">
-              Avengers: Wojna totalna - Najlepszym filmem 2019 roku?
-            </h2>
-            <span class="article__time--news">czas przeczytania: 2min</span>
-          </div>
-        </article>
-        <article class="article--news">
-          <img src="images/img.jpg" alt="" class="article__image--news" />
-          <div class="article__content--news">
-            <h2 class="article__title--news">
-              Avengers: Wojna totalna - Najlepszym filmem 2019 roku?
-            </h2>
-            <span class="article__time--news">czas przeczytania: 2min</span>
-          </div>
-        </article>
-        <article class="article--news">
-          <img src="images/img.jpg" alt="" class="article__image--news" />
-          <div class="article__content--news">
-            <h2 class="article__title--news">
-              Avengers: Wojna totalna - Najlepszym filmem 2019 roku?
-            </h2>
-            <span class="article__time--news">czas przeczytania: 2min</span>
-          </div>
-        </article>
-        <article class="article--news">
-          <img src="images/img.jpg" alt="" class="article__image--news" />
-          <div class="article__content--news">
-            <h2 class="article__title--news">
-              Avengers: Wojna totalna - Najlepszym filmem 2019 roku?
-            </h2>
-            <span class="article__time--news">czas przeczytania: 2min</span>
-          </div>
-        </article>
+        <?php $mainInstance->excecuteQuery("news") ?>
       </div>
     </section>
     <section class="display display--serials">
-
       <h1 class="display__title">Seriale</h1>
       <ul class="display__content display__content--serials">
-        <?php foreach ($requestDataInstance->__constructor("serials") as $rowSerial) :  ?>
-          <li class="card">
-            <img src="<?php echo $rowSerial['serial_cover'] ?>" alt="<?php echo $rowSerial['serial_name'] ?>" class="card__image" />
-            <div class="card__data">
-              <span class="card__name"><?php echo $rowSerial['serial_name'] ?></span>
-              <div class="card__scale">
-                <span class="card__count">1568 ocen</span>
-                <span class="card__rate">7.8 <span class="material-symbols-outlined card__icon--star"> stars </span>
-                </span>
-              </div>
-            </div>
-          </li>
-        <?php endforeach; ?>
-        <li class="card">
-          <img src="images/img2.jpg" alt="" class="card__image" />
-          <div class="card__data">
-            <span class="card__name">Avengers: Wojna totalna</span>
-            <div class="card__scale">
-              <span class="card__count">1568 ocen</span>
-              <span class="card__rate">7.8 <span class="material-symbols-outlined card__icon--star"> stars </span>
-              </span>
-            </div>
-          </div>
-        </li>
+        <?php $mainInstance->excecuteQuery("serials") ?>
       </ul>
       <a href="#" class="display__more">Zobacz Więcej!</a>
     </section>
     <section class="display display--films">
       <h1 class="display__title">Filmy</h1>
       <ul class="display__content display__content--films">
-        <?php foreach ($requestDataInstance->__constructor("films") as $rowFilm) :  ?>
-          <li class="card">
-            <img src="<?php echo $rowFilm['film_cover'] ?>" alt="<?php echo $rowFilm['film_name'] ?>" class="card__image" />
-            <div class="card__data">
-              <span class="card__name"><?php echo $rowFilm['film_name'] ?></span>
-              <div class="card__scale">
-                <span class="card__count">1568 ocen</span>
-                <span class="card__rate">7.8 <span class="material-symbols-outlined card__icon--star"> stars </span>
-                </span>
-              </div>
-            </div>
-          </li>
-        <?php endforeach ?>
+        <?php $mainInstance->excecuteQuery("films") ?>
       </ul>
       <a href="#" class="display__more">Zobacz Więcej!</a>
     </section>
     <section class="opinions">
       <h1 class="opinions__title">Oceny Krytyków</h1>
-
       <div class="opinions__wrapper">
-        <span class="material-symbols-outlined opinion__arrow opinion__arrow--left">
+        <span class="material-symbols-outlined opinion__arrow opinion__arrow--left hide">
           keyboard_arrow_left
         </span>
         <span class="material-symbols-outlined opinion__arrow opinion__arrow--right">
           keyboard_arrow_right
         </span>
         <div class="opinions__content">
-          <article class="opinion">
-            <div class="opinion__info">
-              <img src="images/img.jpg" alt="" class="opinion__image" />
-              <div class="opinion__show">
-                <span class="show__category">Serial</span>
-                <span class="show__name">Avengers: Koniec gry</span>
-              </div>
-            </div>
-            <div class="opinion__content">
-              <div class="opinion__critic">
-                <img src="images/pobrane.jpg" alt="" class="critic__icon--avatar" />
-                <div class="critic__data">
-                  <span class="critic__name"> Andrzej Kowalski</span>
-                  <span class="critic__subscribers"> 12.2 obserwujących</span>
-                  <button class="critic__observe">Obserwuj</button>
-                </div>
-              </div>
-              <div class="opinion__rating">
-                <span class="opinion__rate">10</span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-              </div>
-              <p class="opinion__desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae odio laboriosam
-                repudiandae voluptatem laudantium eligendi, facilis, deleniti, modi fuga eum atque
-                vero illo! Dolorum illo sit eveniet quae, cupiditate ex!
-              </p>
-            </div>
-          </article>
-          <article class="opinion">
-            <div class="opinion__info">
-              <img src="images/img.jpg" alt="" class="opinion__image" />
-              <div class="opinion__show">
-                <span class="show__category">Serial</span>
-                <span class="show__name">Avengers: Koniec gry</span>
-              </div>
-            </div>
-            <div class="opinion__content">
-              <div class="opinion__critic">
-                <img src="images/pobrane.jpg" alt="" class="critic__icon--avatar" />
-                <div class="critic__data">
-                  <span class="critic__name"> Andrzej Kowalski</span>
-                  <span class="critic__subscribers"> 12.2 obserwujących</span>
-                  <button class="critic__observe">Obserwuj</button>
-                </div>
-              </div>
-              <div class="opinion__rating">
-                <span class="opinion__rate">10</span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-              </div>
-              <p class="opinion__desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae odio laboriosam
-                repudiandae voluptatem laudantium eligendi, facilis, deleniti, modi fuga eum atque
-                vero illo! Dolorum illo sit eveniet quae, cupiditate ex!
-              </p>
-            </div>
-          </article>
-          <article class="opinion">
-            <div class="opinion__info">
-              <img src="images/img.jpg" alt="" class="opinion__image" />
-              <div class="opinion__show">
-                <span class="show__category">Serial</span>
-                <span class="show__name">Avengers: Koniec gry</span>
-              </div>
-            </div>
-            <div class="opinion__content">
-              <div class="opinion__critic">
-                <img src="images/pobrane.jpg" alt="" class="critic__icon--avatar" />
-                <div class="critic__data">
-                  <span class="critic__name"> Andrzej Kowalski</span>
-                  <span class="critic__subscribers"> 12.2 obserwujących</span>
-                  <button class="critic__observe">Obserwuj</button>
-                </div>
-              </div>
-              <div class="opinion__rating">
-                <span class="opinion__rate">10</span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-              </div>
-              <p class="opinion__desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae odio laboriosam
-                repudiandae voluptatem laudantium eligendi, facilis, deleniti, modi fuga eum atque
-                vero illo! Dolorum illo sit eveniet quae, cupiditate ex!
-              </p>
-            </div>
-          </article>
-          <article class="opinion">
-            <div class="opinion__info">
-              <img src="images/img.jpg" alt="" class="opinion__image" />
-              <div class="opinion__show">
-                <span class="show__category">Serial</span>
-                <span class="show__name">Avengers: Koniec gry</span>
-              </div>
-            </div>
-            <div class="opinion__content">
-              <div class="opinion__critic">
-                <img src="images/pobrane.jpg" alt="" class="critic__icon--avatar" />
-                <div class="critic__data">
-                  <span class="critic__name"> Andrzej Kowalski</span>
-                  <span class="critic__subscribers"> 12.2 obserwujących</span>
-                  <button class="critic__observe">Obserwuj</button>
-                </div>
-              </div>
-              <div class="opinion__rating">
-                <span class="opinion__rate">10</span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star fill"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-                <span class="material-symbols-outlined opinion__icon--star"> star </span>
-              </div>
-              <p class="opinion__desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae odio laboriosam
-                repudiandae voluptatem laudantium eligendi, facilis, deleniti, modi fuga eum atque
-                vero illo! Dolorum illo sit eveniet quae, cupiditate ex!
-              </p>
-            </div>
-          </article>
+          <?php $mainInstance->excecuteQuery("criticsRate") ?>
         </div>
       </div>
     </section>

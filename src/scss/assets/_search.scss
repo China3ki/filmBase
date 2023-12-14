@@ -1,0 +1,105 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  background-color: var(--color-background);
+  overflow: hidden;
+  z-index: 3;
+  transition: all 0.4s;
+  .search__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    .search__main {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 50px;
+      .search__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid $secondory-color;
+        border-right: none;
+        padding: 5px;
+        color: $secondory-color;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      .search__input {
+        width: 100%;
+        border: 1px solid $secondory-color;
+        border-left: none;
+        background-color: transparent;
+        font-size: 20px;
+        color: var(--color-text);
+      }
+      .search__input:focus {
+        outline: none;
+      }
+    }
+    .search__close {
+      padding: 10px;
+      background-color: transparent;
+      color: var(--color-text);
+      border: none;
+      font-size: 17px;
+      cursor: pointer;
+    }
+  }
+  .search__results {
+    display: flex;
+    flex-direction: column;
+
+    .search__result {
+      display: flex;
+      padding: 10px;
+      border-bottom: 1px solid var(--color-text);
+      transition: color 0.2s;
+      cursor: pointer;
+      .result__image {
+        height: 100px;
+        object-fit: cover;
+      }
+      .result__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5px;
+        padding-left: 20px;
+        .result__production {
+          display: flex;
+          flex-direction: column;
+          .result__name {
+            font-size: 22px;
+          }
+          .result__year {
+            color: rgba(white, 0.7);
+          }
+        }
+        .result__actors {
+          color: rgba(white, 0.7);
+        }
+      }
+    }
+    .search__result:first-child {
+      border-top: 1px solid var(--color-text);
+    }
+    .search__result:hover {
+      color: $secondory-color;
+    }
+  }
+}
+.search.show {
+  transform: scale(1);
+}

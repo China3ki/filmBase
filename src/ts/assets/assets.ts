@@ -1,16 +1,20 @@
+import { searchEngine } from './search.js';
 const showElements = (e: Event) => {
+  e.preventDefault();
   const target = e.target as Element;
-  const form: HTMLElement = document.querySelector('.header__search');
+  const form: HTMLElement = document.querySelector('.search');
   const menu: HTMLElement = document.querySelector('.menu');
-  const searchInput: HTMLElement = document.querySelector('.header__input');
+  const searchInput: HTMLElement = document.querySelector('.search__input');
+  const accountPanel: HTMLElement = document.querySelector('.account');
   // Show input
   if (
     target.parentElement.classList.contains('icon__set--search') ||
-    target.classList.contains('icon__set--search')
+    target.classList.contains('icon__set--search') ||
+    target.classList.contains('header__input')
   ) {
     form.classList.add('show');
     searchInput.focus();
-  } else if (target.classList.contains('header__icon--close')) {
+  } else if (target.classList.contains('search__close')) {
     form.classList.remove('show');
   }
   // Show menu
@@ -21,6 +25,15 @@ const showElements = (e: Event) => {
     menu.classList.add('show');
   } else if (target.classList.contains('menu__icon--close')) {
     menu.classList.remove('show');
+  }
+  // Show Account panel
+  if (
+    target.classList.contains('header__icon--login') ||
+    target.classList.contains('icon__set--login')
+  ) {
+    accountPanel.classList.add('show');
+  } else if (target.classList.contains('account__icon--close')) {
+    accountPanel.classList.remove('show');
   }
 };
 
@@ -55,3 +68,5 @@ document
   .querySelectorAll('.menu__back')
   .forEach((list) => list.addEventListener('touchend', previousMenu));
 document.querySelector('.theme').addEventListener('click', changeTheme);
+
+document.querySelector('.search__input').addEventListener('input', searchEngine);
