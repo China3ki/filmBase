@@ -14,8 +14,11 @@ const showElements = (e: Event) => {
   ) {
     form.classList.add('show');
     searchInput.focus();
+    document.body.style.overflowY = 'hidden';
   } else if (target.classList.contains('search__close')) {
     form.classList.remove('show');
+    searchInput.blur();
+    document.body.style.overflowY = 'auto';
   }
   // Show menu
   if (
@@ -27,9 +30,11 @@ const showElements = (e: Event) => {
     menu.classList.remove('show');
   }
   // Show Account panel
+  console.log(target);
   if (
     target.classList.contains('header__icon--login') ||
-    target.classList.contains('icon__set--login')
+    target.classList.contains('icon__set--login') ||
+    target.classList.contains('icon__caption')
   ) {
     accountPanel.classList.add('show');
   } else if (target.classList.contains('account__icon--close')) {
@@ -49,7 +54,6 @@ const previousMenu = (e: Event) => {
 };
 const changeTheme = () => {
   const theme: string = document.documentElement.dataset.theme;
-  console.log(theme);
   document.documentElement.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light');
 };
 

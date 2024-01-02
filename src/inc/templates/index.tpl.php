@@ -123,7 +123,7 @@ function display($data, $type)
             <span class='opinion__rate'>{$row['rate']}</span>";
         for ($i = 0; $i < 10; $i++) {
           if ($i >= $row['rate']) {
-            echo " <span class='material-symbols-outlined opinion__icon--star'> star </span>";
+            echo "<span class='material-symbols-outlined opinion__icon--star'> star </span>";
           } else {
             echo "  <span class='material-symbols-outlined opinion__icon--star fill'> star </span>";
           }
