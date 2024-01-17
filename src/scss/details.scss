@@ -190,9 +190,7 @@
             gap: 10px;
             overflow: auto;
             width: 100%;
-
-            // min-width: 300px;
-            max-width: 200px;
+            max-width: 230px;
             padding-bottom: 10px;
             .info__season {
               color: var(--color-text);
@@ -217,53 +215,109 @@
         }
       }
     }
-    .cast {
+  }
+  .gallery {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin: 20px;
+
+    .gallery__title {
+      padding-left: 20px;
+    }
+    .gallery__images {
       display: flex;
-      flex-direction: column;
+      padding-bottom: 10px;
       gap: 10px;
-      align-items: center;
-      margin: 20px;
-
-      .cast__title {
-        font-size: 30px;
-        color: var(--color-text);
-      }
-      .actors {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        // max-width: 80%;
-        // overflow: auto;
-
-        .actor {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 10px;
-          transition: color 0.2s;
-          cursor: pointer;
-          .actor__image {
-            width: 100%;
-            object-fit: cover;
-          }
-          .actor__info {
-            color: rgba(var(--color-textRGB), 0.8);
-            transition: color 0.2s;
-          }
-          .actor__info--link {
-            text-align: center;
-          }
-          .actor__info--link:hover {
-            color: $secondory-color;
-          }
-        }
-      }
-      .cast__more {
-        color: var(--color-text);
-        border: 2px solid var(--color-text);
-        padding: 10px;
-        transition: all 0.4s;
+      // max-width: 400px;
+      // overflow: scroll;
+      .gallery__image {
+        min-width: 150px;
+        height: 150px;
+        object-fit: cover;
         cursor: pointer;
       }
+    }
+    .gallery__more {
+      color: var(--color-text);
+      border: 2px solid var(--color-text);
+      padding: 10px;
+      transition: all 0.4s;
+      cursor: pointer;
+    }
+  }
+  .trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--color-text);
+    width: 100%;
+    padding: 20px;
+    // margin: 20px;
+    .trailer__title {
+      font-size: 30px;
+      color: var(--color-background);
+    }
+    .trailer__film {
+      max-width: 800px;
+      width: 100%;
+      height: 400px;
+    }
+  }
+  .cast {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(var(--color-textRGB), 0.2);
+    .cast__title {
+      font-size: 30px;
+      color: var(--color-text);
+    }
+    .actors {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .actor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        transition: color 0.2s;
+        cursor: pointer;
+        .actor__image {
+          width: 100%;
+          object-fit: cover;
+        }
+        .actor__info {
+          color: rgba(var(--color-textRGB), 0.8);
+          transition: color 0.2s;
+        }
+        .actor__info--role {
+          padding-top: 10px;
+        }
+        .actor__info--link {
+          text-align: center;
+        }
+        .actor__info--link:hover {
+          color: $secondory-color;
+        }
+      }
+      .actor:hover .actor__info--link {
+        color: $secondory-color;
+      }
+    }
+    .cast__more {
+      color: var(--color-text);
+      border: 2px solid var(--color-text);
+      padding: 10px;
+      transition: all 0.4s;
+      cursor: pointer;
     }
   }
 }
@@ -273,8 +327,20 @@
       .info__all {
         width: 100%;
         flex-direction: row;
+        .info__main {
+          .info__image {
+            width: 150px;
+            height: 200px;
+          }
+          .info__details {
+            .info__seasons {
+              max-width: 300px !important;
+            }
+          }
+        }
       }
     }
+
     .cast {
       .actors {
         grid-template-columns: repeat(6, 1fr) !important;
@@ -306,6 +372,51 @@
       .info__all {
         flex-direction: row;
         width: 1090px;
+        .info__main {
+          .info__details {
+            .info__seasons {
+              max-width: 620px !important;
+            }
+          }
+        }
+      }
+    }
+    .gallery {
+      .gallery__title {
+      }
+      .gallery__images {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        overflow: hidden;
+        .gallery__image {
+          object-fit: cover;
+          transition: transform 0.4s;
+        }
+        .gallery__image:hover {
+          transform: scale(1.05);
+        }
+        .gallery__image--main {
+          grid-column: 1 / span 3;
+          grid-row: 1 / span 2;
+          width: 100%;
+          height: 310px;
+        }
+        .gallery__image--secondary {
+          grid-column: 4 / span 2;
+          grid-row: 1 / span 2;
+          width: 100%;
+          height: 310px;
+        }
+        .gallery__image--widther {
+          grid-column: 1 / span 2;
+          width: 100%;
+        }
+        .gallery__image--last {
+          grid-column: 4 / span 2;
+
+          width: 100%;
+        }
       }
     }
   }

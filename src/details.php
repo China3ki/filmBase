@@ -82,6 +82,8 @@
               <a href="" class="info__season">Sezon 1</a>
               <a href="" class="info__season">Sezon 1</a>
               <a href="" class="info__season">Sezon 1</a>
+              <a href="" class="info__season">Sezon 1</a>
+              <a href="" class="info__season">Sezon 1</a>
 
             </div>
           </div>
@@ -93,46 +95,89 @@
           <span>Francja</span>
           <span class="info__genre">Premiera</span>
           <span>20.12.2023</span>
+          <span class="info__genre">Studio</span>
+          <span>AMC</span>
         </div>
-      </div>
-      <div class="cast">
-        <h1 class="cast__title">Obsada</h1>
-        <div class="actors">
-          <div class="actor">
-            <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
-            <a href="" class="actor__info actor__info--link actor__info">Norman Reedus</a>
-            <span class="actor__info">jako</span>
-            <a href="" class="actor__info actor__info--link">Daryl Dixon</a>
-          </div>
-          <div class="actor">
-            <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
-            <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>
-            <span class="actor__info">jako</span>
-            <a href="" class="actor__info actor__info--link">Daryl Dixon</a>
-          </div>
-          <div class="actor">
-            <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
-            <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>
-            <span class="actor__info">jako</span>
-            <a href="" class="actor__info actor__info--link">Daryl Dixon</a>
-          </div>
-          <div class="actor">
-            <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
-            <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>
-            <span class="actor__info">jako</span>
-            <a href="" class="actor__info actor__info--link">Daryl Dixon</a>
-          </div>
-          <div class="actor">
-            <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
-            <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>
-            <span class="actor__info">jako</span>
-            <a href="" class="actor__info actor__info--link">Daryl Dixon</a>
-          </div>
-        </div>
-        <a href="#" class="cast__more">Zobacz pełną obsadę</a>
       </div>
     </section>
+    <section class="gallery">
+      <h1 class="gallery__title">Galeria zdjęciowa </h1>
+      <div class="gallery__images">
+        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--main">
+        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--secondary">
+        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--widther">
+        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image">
+        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--last">
+      </div>
+      <a href="#" class="gallery__more">Zobacz pełną obsadę</a>
+    </section>
+    <section class="trailer">
+      <h1 class="trailer__title">Trailer</h1>
+      <iframe src="https://www.youtube.com/embed/iId5WDsYxZ4?si=c5j-Bi2FcKfoK62i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="trailer__film"></iframe>
+    </section>
+    <section class="cast">
+      <h1 class="cast__title">Obsada</h1>
+      <div class="actors">
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info">Norman Reedus</a>
+          <span class="actor__info">jako</span>
+          <a href="" class="actor__info">Daryl Dixon</a>
+        </div>
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>
+          <span class="actor__info">jako</span>
+          <a href="" class="actor__info">Daryl Dixon</a>
+        </div>
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>
+          <span class="actor__info">jako</span>
+          <a href="" class="actor__info">Daryl Dixon</a>
+        </div>
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>
+          <span class="actor__info">jako</span>
+          <a href="" class="actor__info ">Daryl Dixon</a>
+        </div>
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>
+          <span class="actor__info">jako</span>
+          <a href="" class="actor__info ">Daryl Dixon</a>
+        </div>
+      </div>
+      <a href="#" class="cast__more">Zobacz pełną obsadę</a>
+    </section>
 
+    <section class="cast">
+      <h1 class="cast__title">Postacie</h1>
+      <div class="actors">
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info--role">Daryl Dixon</a>
+        </div>
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info--role">Daryl Dixon</a>
+        </div>
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info--role">Daryl Dixon</a>
+        </div>
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info--role">Daryl Dixon</a>
+        </div>
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info--role">Daryl Dixon</a>
+        </div>
+      </div>
+      <a href="#" class="cast__more">Zobacz wszystkie role</a>
+    </section>
   </main>
 
   <?php require("inc/templates/_footer.tpl.php") ?>

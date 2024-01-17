@@ -888,7 +888,7 @@ body {
   gap: 10px;
   overflow: auto;
   width: 100%;
-  max-width: 200px;
+  max-width: 230px;
   padding-bottom: 10px;
 }
 .content .info .info__all .info__main .info__details .info__seasons .info__season {
@@ -910,22 +910,71 @@ body {
   font-weight: 600;
   font-size: 20px;
 }
-.content .info .cast {
+.content .gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+.content .gallery .gallery__title {
+  padding-left: 20px;
+}
+.content .gallery .gallery__images {
+  display: flex;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+.content .gallery .gallery__images .gallery__image {
+  min-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.content .gallery .gallery__more {
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  padding: 10px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.content .trailer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--color-text);
+  width: 100%;
+  padding: 20px;
+}
+.content .trailer .trailer__title {
+  font-size: 30px;
+  color: var(--color-background);
+}
+.content .trailer .trailer__film {
+  max-width: 800px;
+  width: 100%;
+  height: 400px;
+}
+.content .cast {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
   margin: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(var(--color-textRGB), 0.2);
 }
-.content .info .cast .cast__title {
+.content .cast .cast__title {
   font-size: 30px;
   color: var(--color-text);
 }
-.content .info .cast .actors {
+.content .cast .actors {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.content .info .cast .actors .actor {
+.content .cast .actors .actor {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -933,21 +982,27 @@ body {
   transition: color 0.2s;
   cursor: pointer;
 }
-.content .info .cast .actors .actor .actor__image {
+.content .cast .actors .actor .actor__image {
   width: 100%;
   object-fit: cover;
 }
-.content .info .cast .actors .actor .actor__info {
+.content .cast .actors .actor .actor__info {
   color: rgba(var(--color-textRGB), 0.8);
   transition: color 0.2s;
 }
-.content .info .cast .actors .actor .actor__info--link {
+.content .cast .actors .actor .actor__info--role {
+  padding-top: 10px;
+}
+.content .cast .actors .actor .actor__info--link {
   text-align: center;
 }
-.content .info .cast .actors .actor .actor__info--link:hover {
+.content .cast .actors .actor .actor__info--link:hover {
   color: #9e5df5;
 }
-.content .info .cast .cast__more {
+.content .cast .actors .actor:hover .actor__info--link {
+  color: #9e5df5;
+}
+.content .cast .cast__more {
   color: var(--color-text);
   border: 2px solid var(--color-text);
   padding: 10px;
@@ -959,6 +1014,13 @@ body {
   .content .info .info__all {
     width: 100%;
     flex-direction: row;
+  }
+  .content .info .info__all .info__main .info__image {
+    width: 150px;
+    height: 200px;
+  }
+  .content .info .info__all .info__main .info__details .info__seasons {
+    max-width: 300px !important;
   }
   .content .cast .actors {
     grid-template-columns: repeat(6, 1fr) !important;
@@ -985,5 +1047,41 @@ body {
   .content .info .info__all {
     flex-direction: row;
     width: 1090px;
+  }
+  .content .info .info__all .info__main .info__details .info__seasons {
+    max-width: 620px !important;
+  }
+  .content .gallery .gallery__images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
+  }
+  .content .gallery .gallery__images .gallery__image {
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .content .gallery .gallery__images .gallery__image:hover {
+    transform: scale(1.05);
+  }
+  .content .gallery .gallery__images .gallery__image--main {
+    grid-column: 1/span 3;
+    grid-row: 1/span 2;
+    width: 100%;
+    height: 310px;
+  }
+  .content .gallery .gallery__images .gallery__image--secondary {
+    grid-column: 4/span 2;
+    grid-row: 1/span 2;
+    width: 100%;
+    height: 310px;
+  }
+  .content .gallery .gallery__images .gallery__image--widther {
+    grid-column: 1/span 2;
+    width: 100%;
+  }
+  .content .gallery .gallery__images .gallery__image--last {
+    grid-column: 4/span 2;
+    width: 100%;
   }
 }/*# sourceMappingURL=details.css.map */
