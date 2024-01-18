@@ -30,7 +30,7 @@ const showElements = (e: Event) => {
     menu.classList.remove('show');
   }
   // Show Account panel
-  console.log(target);
+
   if (
     target.classList.contains('header__icon--login') ||
     target.classList.contains('icon__set--login') ||
@@ -58,19 +58,13 @@ const changeTheme = () => {
 };
 
 document.querySelector('body').addEventListener('click', showElements);
-document.querySelector('body').addEventListener('touchend', showElements);
 document
   .querySelectorAll('.list__unwind')
   .forEach((list) => list.addEventListener('click', nextMenu));
 document
-  .querySelectorAll('.list__unwind')
-  .forEach((list) => list.addEventListener('touchend', nextMenu));
-document
   .querySelectorAll('.menu__back')
   .forEach((list) => list.addEventListener('click', previousMenu));
-document
-  .querySelectorAll('.menu__back')
-  .forEach((list) => list.addEventListener('touchend', previousMenu));
+
 document.querySelector('.theme').addEventListener('click', changeTheme);
 
 document.querySelector('.search__input').addEventListener('input', searchEngine);

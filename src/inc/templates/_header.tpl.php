@@ -3,7 +3,7 @@
         <span class="material-symbols-outlined header__icon header__icon--menu"> menu </span>
         <span class="icon__caption icon__caption_">Menu</span>
     </div>
-    <h1><a href="#" class="header__title">FilmBase</a></h1>
+    <h1><a href="index.php" class="header__title">FilmBase</a></h1>
     <form class="header__search">
         <button class="material-symbols-outlined header__submit">search</button>
         <input type="text" class="header__input" placeholder="Wyszukaj" />

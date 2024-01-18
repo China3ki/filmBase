@@ -7,7 +7,7 @@
   <title>FilmBase</title>
   <link rel="stylesheet" href="css/details.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script src="js/index.js" defer></script>
+  <script src="js/details.js" defer></script>
   <script type="module" src="js/assets/assets.js" defer></script>
   <script src="https://kit.fontawesome.com/e348b353f1.js" crossorigin="anonymous"></script>
 </head>
@@ -34,22 +34,23 @@
         <div class="user__rate">
           <span class="user__rating">10</span>
           <span class='user__title'>twoja ocena</span>
+          <button class="user__show"></button>
           <div class="rate">
             <fieldset class="rate__field">
               <legend>Oceń film</legend>
               <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="rate__image">
               <div class="rate__vod">
                 <div class="rate__star">
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="1" class='material-symbols-outlined rate__icon--star '> star </span>
+                  <span data-star="2" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="3" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="4" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="5" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="6" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="7" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="8" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="9" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="10" class='material-symbols-outlined rate__icon--star'> star </span>
                 </div>
               </div>
               <form class="rate__comment">
@@ -64,7 +65,6 @@
           </div>
         </div>
       </div>
-
     </section>
     <section class="info">
       <div class="info__all">
@@ -100,6 +100,37 @@
         </div>
       </div>
     </section>
+    <section class="episodes">
+      <h1 class="episodes__title">Odcinki</h1>
+      <div class="episode">
+        <img src="images/long.jpg" alt="" class="episode__image">
+        <div class="episode__info">
+          <span class="episode__number">S01E01</span>
+          <span class="episode__name">
+            EVERYBODY WINS A PRIZE
+          </span>
+          <div class="episode__rate">
+            <span class='material-symbols-outlined episode__icon--star'> stars </span>
+            </span>
+            <span class="episode__rating">7.8</span>
+          </div>
+        </div>
+      </div>
+      <div class="episode">
+        <img src="images/long.jpg" alt="" class="episode__image">
+        <div class="episode__info">
+          <span class="episode__number">S01E01</span>
+          <span class="episode__name">
+            EVERYBODY WINS A PRIZE
+          </span>
+          <div class="episode__rate">
+            <span class='material-symbols-outlined episode__icon--star'> stars </span>
+            </span>
+            <span class="episode__rating">7.8</span>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="gallery">
       <h1 class="gallery__title">Galeria zdjęciowa </h1>
       <div class="gallery__images">
@@ -124,6 +155,13 @@
           <span class="actor__info">jako</span>
           <a href="" class="actor__info">Daryl Dixon</a>
         </div>
+        <div class="actor">
+          <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
+          <a href="" class="actor__info actor__info--link actor__info">Norman Reedus</a>
+          <span class="actor__info">jako</span>
+          <a href="" class="actor__info">Daryl Dixon</a>
+        </div>
+
         <div class="actor">
           <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
           <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>

@@ -25,6 +25,6 @@
                 <span class="logo__name">X</span>
             </div>
         </div>
-        <span class="copyright">Copyright &copy FilmBase 2023</span>
+        <span class="copyright">Copyright &copy FilmBase 2024</span>
     </div>
 </footer>

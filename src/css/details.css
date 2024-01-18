@@ -785,12 +785,20 @@ body {
   color: rgba(255, 255, 255, 0.9);
   text-wrap: nowrap;
 }
+.content .image .user__rate .user__show {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .content .image .user__rate .rate {
   position: absolute;
   right: 0;
   top: 70px;
   display: flex;
-  max-height: 0px;
+  height: 0px;
   overflow: hidden;
   justify-content: center;
   background-color: var(--color-background);
@@ -819,6 +827,10 @@ body {
   width: 30px;
   font-size: 35px;
   cursor: pointer;
+}
+.content .image .user__rate .rate .rate__field .rate__vod .rate__star .rate__icon--star.fill {
+  font-variation-settings: "FILL" 1, "wght" 200;
+  color: #ffc107;
 }
 .content .image .user__rate .rate .rate__field .rate__comment {
   display: flex;
@@ -850,7 +862,10 @@ body {
 }
 .content .image .user__rate .rate.show {
   display: flex;
-  max-height: 500px;
+  height: 260px;
+}
+.content .image .user__rate.show {
+  background-color: rgba(158, 93, 245, 0.8);
 }
 .content .image .user__rate:hover {
   background-color: rgba(158, 93, 245, 0.9);
@@ -910,6 +925,60 @@ body {
   font-weight: 600;
   font-size: 20px;
 }
+.content .episodes {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 20px 0px;
+  width: 100%;
+  max-width: 1090px;
+}
+.content .episodes .episodes__title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  align-self: center;
+}
+.content .episodes .episode {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  min-height: 160px;
+  max-height: 180px;
+  max-width: 600px;
+  margin: 10px;
+  border: 2px solid var(--color-text);
+}
+.content .episodes .episode .episode__image {
+  width: 180px;
+  height: 100%;
+  object-fit: cover;
+}
+.content .episodes .episode .episode__info {
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  gap: 10px;
+}
+.content .episodes .episode .episode__info .episode__name {
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  font-size: 20px;
+  padding: 10px;
+}
+.content .episodes .episode .episode__info .episode__number {
+  justify-self: center;
+  align-self: center;
+  font-size: 25px;
+  color: #9e5df5;
+}
+.content .episodes .episode .episode__info .episode__rate {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-self: end;
+  padding-right: 20px;
+}
+.content .episodes .episode .episode__info .episode__rate .episode__icon--star {
+  color: #ffc107;
+}
 .content .gallery {
   display: flex;
   align-items: center;
@@ -919,7 +988,7 @@ body {
   margin: 20px;
 }
 .content .gallery .gallery__title {
-  padding-left: 20px;
+  padding-left: 30px;
 }
 .content .gallery .gallery__images {
   display: flex;
@@ -1022,10 +1091,6 @@ body {
   .content .info .info__all .info__main .info__details .info__seasons {
     max-width: 300px !important;
   }
-  .content .cast .actors {
-    grid-template-columns: repeat(6, 1fr) !important;
-    max-width: 1090px !important;
-  }
   .content .cast .actors .actor .actor__image {
     width: 150px !important;
     height: initial !important;
@@ -1050,6 +1115,10 @@ body {
   }
   .content .info .info__all .info__main .info__details .info__seasons {
     max-width: 620px !important;
+  }
+  .content .cast .actors {
+    grid-template-columns: repeat(6, 1fr) !important;
+    max-width: 1090px !important;
   }
   .content .gallery .gallery__images {
     display: grid;
