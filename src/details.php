@@ -41,24 +41,31 @@
               <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="rate__image">
               <div class="rate__vod">
                 <div class="rate__star">
-                  <span data-star="1" class='material-symbols-outlined rate__icon--star '> star </span>
-                  <span data-star="2" class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span data-star="3" class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span data-star="4" class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span data-star="5" class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span data-star="6" class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span data-star="7" class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span data-star="8" class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span data-star="9" class='material-symbols-outlined rate__icon--star'> star </span>
-                  <span data-star="10" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="1" data-desc="Kto to ogląda?" class='material-symbols-outlined rate__icon--star '> star </span>
+                  <span data-star="2" data-desc="Beznadzieja" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="3" data-desc="Bardzo słaby" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="4" data-desc="Slaby" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="5" data-desc="Średni" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="6" data-desc="Nie jest żle" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="7" data-desc="Dobry" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="8" data-desc="Bardzo Dobry" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="9" data-desc="Wybitny" class='material-symbols-outlined rate__icon--star'> star </span>
+                  <span data-star="10" data-desc="Genialny!" class='material-symbols-outlined rate__icon--star'> star </span>
+                </div>
+                <div class="rate__details">
+                  <span class="rate__number">0/10</span>
+                  <span class="rate__opinion">Moja ocena</span>
                 </div>
               </div>
               <form class="rate__comment">
                 <label for="a">Twój komentarz</label>
-                <textarea id="a" class="rate__text"></textarea>
+                <textarea id="a" class="rate__text" maxlength="150"></textarea>
                 <div class="rate__sub">
                   <span class="rate__count">150/150</span>
-                  <input type="submit" class="rate__submit">
+                  <div class="rate__inputs">
+                    <button class="rate__reset">Wyczyść</button>
+                    <input type="submit" class="rate__submit">
+                  </div>
                 </div>
               </form>
             </fieldset>
@@ -138,10 +145,11 @@
         <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--secondary">
         <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--widther">
         <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image">
-        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--last">
+        <img src="images/daryl.jpg" alt="" class="gallery__image gallery__image--last">
       </div>
-      <a href="#" class="gallery__more">Zobacz pełną obsadę</a>
+      <a href="#" class="gallery__more">Zobacz więcej zdjęć</a>
     </section>
+    <section class=""></section>
     <section class="trailer">
       <h1 class="trailer__title">Trailer</h1>
       <iframe src="https://www.youtube.com/embed/iId5WDsYxZ4?si=c5j-Bi2FcKfoK62i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="trailer__film"></iframe>
@@ -216,8 +224,42 @@
       </div>
       <a href="#" class="cast__more">Zobacz wszystkie role</a>
     </section>
-  </main>
 
+    <section class="rates">
+      <h1 class="rates__title">Opinie użytkowników</h1>
+      <div class="opinions">
+        <div class="opinion">
+          <div class="opinion__header">
+            <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="opinion__image">
+            <div class="opinion__user">
+              <div class="opinion__userInfo">
+                <span class="opinion__name">Andrzej Gotówka</span>
+                <span class="opinion__date">19.01.2024</span>
+              </div>
+              <div class="opinion__rate">
+                <span class="opinion__rating">Ocenił(a) na 8</span>
+                <span class='material-symbols-outlined rate__icon--star fill'> star </span>
+              </div>
+            </div>
+          </div>
+          <span class="opinion__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique adipisci laudantium nulla at nihil aperiam voluptatibus debitis qui doloremque vel veritatis placeat architecto, facere temporibus beatae quam error rem distinctio maxime expedita quia? Quos, ratione inventore quaerat atque quis voluptates sequi earum, quisquam ab illo nihil enim impedit. Voluptates, harum.</span>
+          <div class="opinion__likes">
+            <div class="opinion__rateLikes">
+              <span class="material-symbols-outlined opinion__like--icon">
+                thumb_up
+              </span>
+              <span class="opinion__likesCounter">(0)</span>
+              <span class="material-symbols-outlined opinion__like--icon">
+                thumb_down
+              </span>
+              <span class="opinion__likesCounter">(0)</span>
+            </div>
+            <button class="opinion__reply">Odpowiedż</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <?php require("inc/templates/_footer.tpl.php") ?>
 </body>
 

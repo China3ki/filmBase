@@ -65,7 +65,7 @@
     .user__rate {
       position: absolute;
       right: 15px;
-      bottom: 75px;
+      bottom: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -74,7 +74,6 @@
       padding: 5px;
       background-color: $secondory-color;
       transition: background-color 0.2s;
-      cursor: pointer;
       .user__rating {
         font-weight: 500;
         font-size: 30px;
@@ -117,8 +116,7 @@
           .rate__vod {
             display: flex;
             flex-direction: column;
-            .rate__watch {
-            }
+
             .rate__star {
               display: flex;
               .rate__icon--star {
@@ -130,6 +128,10 @@
                 font-variation-settings: 'FILL' 1, 'wght' 200;
                 color: #ffc107;
               }
+            }
+            .rate__details {
+              display: flex;
+              justify-content: space-between;
             }
           }
           .rate__comment {
@@ -151,13 +153,28 @@
               justify-content: space-between;
               align-items: center;
               gap: 5px;
-
+              margin-top: 5px;
               .rate__count {
                 margin-left: 5px;
               }
-              .rate__submit {
-                padding: 5px;
-                margin-right: 5px;
+              .rate__inputs {
+                display: flex;
+                gap: 5px;
+                .rate__reset {
+                  padding: 5px;
+                  background-color: transparent;
+                  color: var(--color-text);
+                  border: none;
+                  cursor: pointer;
+                }
+                .rate__submit {
+                  padding: 5px;
+                  margin-right: 5px;
+                  background-color: transparent;
+                  color: var(--color-text);
+                  border: none;
+                  cursor: pointer;
+                }
               }
             }
           }
@@ -165,7 +182,7 @@
       }
       .rate.show {
         display: flex;
-        height: 260px;
+        height: 265px;
       }
     }
     .user__rate.show {
@@ -245,9 +262,8 @@
     .episode {
       display: grid;
       grid-template-columns: 180px 1fr;
-      // padding: 20px;
       min-height: 160px;
-      max-height: 180px;
+      max-height: 160px;
       max-width: 600px;
       margin: 10px;
       border: 2px solid var(--color-text);
@@ -258,8 +274,9 @@
       }
       .episode__info {
         display: grid;
-        grid-template-rows: 50px 1fr 50px;
+        grid-template-rows: 30px 1fr 30px;
         gap: 10px;
+        padding: 5px;
         .episode__name {
           text-align: center;
           align-self: center;
@@ -301,8 +318,8 @@
       display: flex;
       padding-bottom: 10px;
       gap: 10px;
-      // max-width: 400px;
-      // overflow: scroll;
+      max-width: 400px;
+      overflow-x: scroll;
       .gallery__image {
         min-width: 150px;
         height: 150px;
@@ -390,6 +407,100 @@
       cursor: pointer;
     }
   }
+  .rates {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 1090px;
+    .rates__title {
+      font-size: 30px;
+      align-self: center;
+    }
+    .opinions {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      width: 100%;
+      gap: 10px;
+      padding: 20px;
+      .opinion {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(var(--color-textRGB), 0.2);
+        max-width: 600px;
+        .opinion__header {
+          display: flex;
+          gap: 10px;
+
+          .opinion__image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .opinion__user {
+            display: flex;
+            flex-direction: column;
+            .opinion__userInfo {
+              display: flex;
+              gap: 10px;
+              .opinion__name {
+                font-size: 17px;
+              }
+              .opinion__date {
+                color: $secondory-color;
+                font-size: 15px;
+              }
+            }
+          }
+          .opinion__rate {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: rgba(var(--color-textRGB), 0.6);
+            .rate__icon--star {
+              font-variation-settings: 'FILL' 1, 'wght' 200;
+              color: #ffc107;
+            }
+          }
+        }
+      }
+      .opinion__likes {
+        display: flex;
+        justify-content: space-between;
+
+        .opinion__rateLikes {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          .opinion__like--icon {
+            cursor: pointer;
+          }
+          .opinion__like--icon:hover {
+            font-variation-settings: 'FILL' 1, 'wght' 300;
+            color: $secondory-color;
+          }
+          .opinion__likesCounter {
+            cursor: default;
+          }
+        }
+        .opinion__reply {
+          background-color: transparent;
+          border: none;
+          color: var(--color-text);
+          font-size: 16px;
+          margin-right: 5px;
+          cursor: pointer;
+        }
+        .opinion__reply:hover {
+          color: $secondory-color;
+        }
+      }
+    }
+  }
 }
 @media (min-width: 768px) {
   .content {
@@ -455,13 +566,12 @@
       }
     }
     .gallery {
-      .gallery__title {
-      }
       .gallery__images {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr);
         overflow: hidden;
+        max-width: initial;
         .gallery__image {
           object-fit: cover;
           transition: transform 0.4s;
