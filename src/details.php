@@ -27,9 +27,19 @@
           <div class="image__rate">
             <span class='material-symbols-outlined image__icon--star'> stars </span>
             </span>
-            <span class="image__rating">7.8</span>
+            <div class="image__rates">
+              <span class="image__rating">7.8</span>
+              <span class="image__numbers">200 ocen</span>
+            </div>
+
           </div>
-          <span class="image__year">2023</span>
+          <span class="image__length">121 min</span>
+          <div class="image__wantWatch">
+            <span class="material-symbols-outlined image__heart--icon">
+              favorite
+            </span>
+            <span class="image__want">Chcę obejrzeć</span>
+          </div>
         </div>
         <div class="user__rate">
           <span class="user__rating">10</span>
@@ -141,11 +151,11 @@
     <section class="gallery">
       <h1 class="gallery__title">Galeria zdjęciowa </h1>
       <div class="gallery__images">
-        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--main">
-        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--secondary">
-        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image gallery__image--widther">
-        <img src="images/films/spiderman1/spider.jpg" alt="" class="gallery__image">
-        <img src="images/daryl.jpg" alt="" class="gallery__image gallery__image--last">
+        <img src="images/long.jpg" alt="" class="gallery__image gallery__image--main">
+        <img src="images/daryl.jpg" alt="" class="gallery__image gallery__image--secondary">
+        <img src="images/daryl.jpg" alt="" class="gallery__image gallery__image--widther">
+        <img src="images/long.jpg" alt="" class="gallery__image gallery__image--square">
+        <img src="images/long.jpg" alt="" class="gallery__image gallery__image--last">
       </div>
       <a href="#" class="gallery__more">Zobacz więcej zdjęć</a>
     </section>
@@ -226,35 +236,178 @@
     </section>
 
     <section class="rates">
-      <h1 class="rates__title">Opinie użytkowników</h1>
-      <div class="opinions">
-        <div class="opinion">
-          <div class="opinion__header">
-            <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="opinion__image">
-            <div class="opinion__user">
-              <div class="opinion__userInfo">
-                <span class="opinion__name">Andrzej Gotówka</span>
-                <span class="opinion__date">19.01.2024</span>
+      <div class="critics">
+        <h1 class="critics__title">Opinie krytyków</h1>
+        <div class="critics__opinions">
+          <div class="critic__opinion">
+            <div class="critic__header">
+              <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="critic__image">
+              <div class="critic__info">
+                <span class="critic__name">Janusz Jaruzelski</span>
+                <span class="critic__sub">12 tys obserwujących</span>
+                <button class="critic__observe">Obserwuj</button>
               </div>
-              <div class="opinion__rate">
-                <span class="opinion__rating">Ocenił(a) na 8</span>
-                <span class='material-symbols-outlined rate__icon--star fill'> star </span>
+            </div>
+            <div class="critic__rate">
+              <span class="critic__number">8</span>
+              <div class="critic__stars">
+                <span class='material-symbols-outlined critic__icon--star fill'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
               </div>
+            </div>
+            <p class="critic__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint molestias sapiente aliquid natus atque vel dignissimos animi impedit tempore aliquam perspiciatis, voluptate eaque cupiditate. Quia necessitatibus eum alias fugit delectus magnam qui. Odit magnam deleniti at iure aliquam iste! Vitae, dolore deserunt in earum ipsam reprehenderit dolor pariatur officia. Veniam?.</p>
+          </div>
+          <div class="critic__opinion">
+            <div class="critic__header">
+              <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="critic__image">
+              <div class="critic__info">
+                <span class="critic__name">Janusz Jaruzelski</span>
+                <span class="critic__sub">12 tys obserwujących</span>
+                <button class="critic__observe">Obserwuj</button>
+              </div>
+            </div>
+            <div class="critic__rate">
+              <span class="critic__number">8</span>
+              <div class="critic__stars">
+                <span class='material-symbols-outlined critic__icon--star fill'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+              </div>
+            </div>
+            <p class="critic__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint molestias sapiente aliquid natus atque vel dignissimos animi impedit tempore aliquam perspiciatis, voluptate eaque cupiditate. Quia necessitatibus eum alias fugit delectus magnam qui. Odit magnam deleniti at iure aliquam iste! Vitae, dolore deserunt in earum ipsam reprehenderit dolor pariatur officia. Veniam?.</p>
+          </div>
+          <div class="critic__opinion">
+            <div class="critic__header">
+              <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="critic__image">
+              <div class="critic__info">
+                <span class="critic__name">Janusz Jaruzelski</span>
+                <span class="critic__sub">12 tys obserwujących</span>
+                <button class="critic__observe">Obserwuj</button>
+              </div>
+            </div>
+            <div class="critic__rate">
+              <span class="critic__number">8</span>
+              <div class="critic__stars">
+                <span class='material-symbols-outlined critic__icon--star fill'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+                <span class='material-symbols-outlined critic__icon--star'> star </span>
+              </div>
+            </div>
+            <p class="critic__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique necessitatibus rem debitis mollitia vel assumenda repellat qui ullam ut voluptatibus molestiae, ipsam ratione, sunt temporibus expedita excepturi minus fuga delectus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="users__opinions">
+        <h1 class="opinions__title">Opinie użytkowników</h1>
+        <div class="opinions">
+          <div class="opinion">
+            <div class="opinion__header">
+              <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="opinion__image">
+              <div class="opinion__user">
+                <div class="opinion__userInfo">
+                  <span class="opinion__name">Andrzej Gotówka</span>
+                  <span class="opinion__date">19.01.2024</span>
+                </div>
+                <div class="opinion__rate">
+                  <span class="opinion__rating">Ocenił(a) na 8</span>
+                  <span class='material-symbols-outlined rate__icon--star fill'> star </span>
+                </div>
+              </div>
+            </div>
+            <p class="opinion__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique adipisci laudantium nulla at nihil aperiam voluptatibus debitis qui doloremque vel veritatis placeat architecto, facere temporibus beatae quam error rem distinctio maxime expedita quia? Quos, ratione inventore quaerat atque quis voluptates sequi earum, quisquam ab illo nihil enim impedit. Voluptates, harum.</p>
+            <div class="opinion__likes">
+              <div class="opinion__rateLikes">
+                <span class="material-symbols-outlined opinion__like--icon">
+                  thumb_up
+                </span>
+                <span class="opinion__likesCounter">(0)</span>
+                <span class="material-symbols-outlined opinion__like--icon">
+                  thumb_down
+                </span>
+                <span class="opinion__likesCounter">(0)</span>
+              </div>
+              <button class="opinion__reply">Odpowiedż</button>
             </div>
           </div>
-          <span class="opinion__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique adipisci laudantium nulla at nihil aperiam voluptatibus debitis qui doloremque vel veritatis placeat architecto, facere temporibus beatae quam error rem distinctio maxime expedita quia? Quos, ratione inventore quaerat atque quis voluptates sequi earum, quisquam ab illo nihil enim impedit. Voluptates, harum.</span>
-          <div class="opinion__likes">
-            <div class="opinion__rateLikes">
-              <span class="material-symbols-outlined opinion__like--icon">
-                thumb_up
-              </span>
-              <span class="opinion__likesCounter">(0)</span>
-              <span class="material-symbols-outlined opinion__like--icon">
-                thumb_down
-              </span>
-              <span class="opinion__likesCounter">(0)</span>
+          <div class="opinion">
+            <div class="opinion__header">
+              <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="opinion__image">
+              <div class="opinion__user">
+                <div class="opinion__userInfo">
+                  <span class="opinion__name">Andrzej Gotówka</span>
+                  <span class="opinion__date">19.01.2024</span>
+                </div>
+                <div class="opinion__rate">
+                  <span class="opinion__rating">Ocenił(a) na 8</span>
+                  <span class='material-symbols-outlined rate__icon--star fill'> star </span>
+                </div>
+              </div>
             </div>
-            <button class="opinion__reply">Odpowiedż</button>
+            <p class="opinion__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique adipisci laudantium nulla at nihil aperiam voluptatibus debitis qui doloremque vel veritatis placeat architecto, facere temporibus beatae quam error rem distinctio maxime expedita quia? Quos, ratione inventore quaerat atque quis voluptates sequi earum, quisquam ab illo nihil enim impedit. Voluptates, harum.</p>
+            <div class="opinion__likes">
+              <div class="opinion__rateLikes">
+                <span class="material-symbols-outlined opinion__like--icon">
+                  thumb_up
+                </span>
+                <span class="opinion__likesCounter">(0)</span>
+                <span class="material-symbols-outlined opinion__like--icon">
+                  thumb_down
+                </span>
+                <span class="opinion__likesCounter">(0)</span>
+              </div>
+              <button class="opinion__reply">Odpowiedż</button>
+            </div>
+          </div>
+          <div class="opinion">
+            <div class="opinion__header">
+              <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="opinion__image">
+              <div class="opinion__user">
+                <div class="opinion__userInfo">
+                  <span class="opinion__name">Andrzej Gotówka</span>
+                  <span class="opinion__date">19.01.2024</span>
+                </div>
+                <div class="opinion__rate">
+                  <span class="opinion__rating">Ocenił(a) na 8</span>
+                  <span class='material-symbols-outlined rate__icon--star fill'> star </span>
+                </div>
+              </div>
+            </div>
+            <p class="opinion__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique adipisci laudantium nulla at nihil aperiam voluptatibus debitis qui doloremque vel veritatis placeat architecto, facere temporibus beatae quam error rem distinctio maxime expedita quia? Quos, ratione inventore quaerat atque quis voluptates sequi earum, quisquam ab illo nihil enim impedit. Voluptates, harum.</p>
+            <div class="opinion__likes">
+              <div class="opinion__rateLikes">
+                <span class="material-symbols-outlined opinion__like--icon">
+                  thumb_up
+                </span>
+                <span class="opinion__likesCounter">(0)</span>
+                <span class="material-symbols-outlined opinion__like--icon">
+                  thumb_down
+                </span>
+                <span class="opinion__likesCounter">(0)</span>
+              </div>
+              <button class="opinion__reply">Odpowiedż</button>
+            </div>
           </div>
         </div>
       </div>

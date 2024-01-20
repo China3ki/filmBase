@@ -1,6 +1,6 @@
 import { searchEngine } from './search.js';
 const showElements = (e: Event) => {
-  e.preventDefault();
+  // e.preventDefault();
   const target = e.target as Element;
   const form: HTMLElement = document.querySelector('.search');
   const menu: HTMLElement = document.querySelector('.menu');

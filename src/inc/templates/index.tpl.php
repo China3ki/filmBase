@@ -87,7 +87,7 @@ function display($data, $type)
       break;
     case "films":
       foreach ($data as $row) {
-        echo " <li class='card'>
+        echo " <a href='details.php?name={$row['film_id']}&type=film'><li class='card'>
         <img src='{$row['film_cover']}' alt='{$row['film_name']}' class='card__image' />
         <div class='card__data'>
           <span class='card__name'>{$row['film_name']}</span>
@@ -97,7 +97,7 @@ function display($data, $type)
             </span>
           </div>
         </div>
-      </li>";
+      </li></a>";
       }
       break;
     case "criticsRate":
