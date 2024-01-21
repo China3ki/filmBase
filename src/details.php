@@ -1,3 +1,4 @@
+<?php require("inc/index/details.inc.php") ?>
 <!DOCTYPE html>
 <html lang="pl" data-theme="dark">
 
@@ -18,6 +19,7 @@
   <?php require("inc/templates/_header.tpl.php") ?>
   <?php require("inc/templates/_nav.tpl.php") ?>
   <main class="content">
+    <!-- 
     <section class="image">
       <img src="images/long.jpg" alt="" class="image__main">
       <div class="image__title">
@@ -82,8 +84,9 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="info">
+    </section> -->
+    <?php $detailsInstance->filmQuery("main") ?>
+    <!-- <section class="info">
       <div class="info__all">
         <div class="info__main">
           <img src="images/daryl.jpg" alt="" class="info__image">
@@ -116,7 +119,7 @@
           <span>AMC</span>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="episodes">
       <h1 class="episodes__title">Odcinki</h1>
       <div class="episode">
@@ -150,16 +153,16 @@
     </section>
     <section class="gallery">
       <h1 class="gallery__title">Galeria zdjęciowa </h1>
-      <div class="gallery__images">
+      <?php $detailsInstance->filmQuery("images") ?>
+      <!-- <div class="gallery__images">
         <img src="images/long.jpg" alt="" class="gallery__image gallery__image--main">
         <img src="images/daryl.jpg" alt="" class="gallery__image gallery__image--secondary">
         <img src="images/daryl.jpg" alt="" class="gallery__image gallery__image--widther">
         <img src="images/long.jpg" alt="" class="gallery__image gallery__image--square">
         <img src="images/long.jpg" alt="" class="gallery__image gallery__image--last">
       </div>
-      <a href="#" class="gallery__more">Zobacz więcej zdjęć</a>
+      <a href="#" class="gallery__more">Zobacz więcej zdjęć</a> -->
     </section>
-    <section class=""></section>
     <section class="trailer">
       <h1 class="trailer__title">Trailer</h1>
       <iframe src="https://www.youtube.com/embed/iId5WDsYxZ4?si=c5j-Bi2FcKfoK62i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="trailer__film"></iframe>
