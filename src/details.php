@@ -120,7 +120,7 @@
         </div>
       </div>
     </section> -->
-    <section class="episodes">
+    <!-- <section class="episodes">
       <h1 class="episodes__title">Odcinki</h1>
       <div class="episode">
         <img src="images/long.jpg" alt="" class="episode__image">
@@ -150,7 +150,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="gallery">
       <h1 class="gallery__title">Galeria zdjęciowa </h1>
       <?php $detailsInstance->filmQuery("images") ?>
@@ -165,12 +165,14 @@
     </section>
     <section class="trailer">
       <h1 class="trailer__title">Trailer</h1>
-      <iframe src="https://www.youtube.com/embed/iId5WDsYxZ4?si=c5j-Bi2FcKfoK62i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="trailer__film"></iframe>
+      <?php $detailsInstance->filmQuery("trailer") ?>
+      <!-- <iframe src="https://www.youtube.com/embed/iId5WDsYxZ4?si=c5j-Bi2FcKfoK62i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="trailer__film"></iframe> -->
     </section>
     <section class="cast">
       <h1 class="cast__title">Obsada</h1>
       <div class="actors">
-        <div class="actor">
+        <?php $detailsInstance->filmQuery("cast") ?>
+        <!-- <div class="actor">
           <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
           <a href="" class="actor__info actor__info--link actor__info">Norman Reedus</a>
           <span class="actor__info">jako</span>
@@ -206,7 +208,7 @@
           <a href="" class="actor__info actor__info--link actor__info--name">Norman Reedus</a>
           <span class="actor__info">jako</span>
           <a href="" class="actor__info ">Daryl Dixon</a>
-        </div>
+        </div> -->
       </div>
       <a href="#" class="cast__more">Zobacz pełną obsadę</a>
     </section>

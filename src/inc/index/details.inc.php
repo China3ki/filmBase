@@ -29,9 +29,11 @@ class Details
                 case "critics":
                     $this->query = "SELECT user_name, user_surname, user_avatar, film_name AS name, film_cover AS cover, rate_comment, rate, 'Filmy' AS type FROM rate_show INNER JOIN films ON fk_rate_film=film_id INNER JOIN users ON fk_rate_user=user_id WHERE fk_user_type = 3 AND film_id = ?";
                     break;
-                case "cast":
-                    $this->query = "SELECT actor_name, actor_surname, character_name FROM roles INNER JOIN actors ON fk_role_actor = actor_id INNER JOIN character_show ON fk_role_character = character_id INNER JOIN films ON fk_role_film = film_id WHERE film_id = ?";
+                case "trailer":
+                    $this->query = "SELECT film_trailer FROM films WHERE film_id = ? ";
                     break;
+                case "cast":
+                    $this->query = "SELECT actor_name, actor_surname, actor_image,character_name, character_image FROM roles INNER JOIN actors ON fk_role_actor = actor_id INNER JOIN character_show ON fk_role_character = character_id WHERE fk_role_film = ? LIMIT 6";
             };
         }
         return $this->prepareQuery($content);

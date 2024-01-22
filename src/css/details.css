@@ -1101,6 +1101,7 @@ body {
 }
 .content .cast .actors .actor .actor__image {
   width: 100%;
+  max-height: 200px;
   object-fit: cover;
 }
 .content .cast .actors .actor .actor__info {
@@ -1111,6 +1112,7 @@ body {
   padding-top: 10px;
 }
 .content .cast .actors .actor .actor__info--link {
+  margin-top: 5px;
   text-align: center;
 }
 .content .cast .actors .actor .actor__info--link:hover {

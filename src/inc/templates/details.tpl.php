@@ -2,9 +2,9 @@
 
 function displayDetails($data, $content)
 {
-    switch ($content) {
-        case "main":
-            echo "<section class='image'>
+  switch ($content) {
+    case "main":
+      echo "<section class='image'>
             <img src='{$data[0]['film_cover_widther']}' alt='film Cover widther' class='image__main'>
             <div class='image__title'>
               <span class='title__type'>FILM</span>
@@ -89,9 +89,42 @@ function displayDetails($data, $content)
             </div>
           </div>
         </section>";
-            break;
-        case "images":
-            echo " <div class='gallery__images'>
+      break;
+    case "episodes":
+      echo " <section class='episodes'>
+          <h1 class='episodes__title'>Odcinki</h1>
+          <div class='episode'>
+            <img src='images/long.jpg' alt='' class='episode__image'>
+            <div class='episode__info'>
+              <span class='episode__number'>S01E01</span>
+              <span class='episode__name'>
+                EVERYBODY WINS A PRIZE
+              </span>
+              <div class='episode__rate'>
+                <span class='material-symbols-outlined episode__icon--star'> stars </span>
+                </span>
+                <span class='episode__rating'>7.8</span>
+              </div>
+            </div>
+          </div>
+          <div class='episode'>
+            <img src='images/long.jpg' alt='' class='episode__image'>
+            <div class='episode__info'>
+              <span class='episode__number'>S01E01</span>
+              <span class='episode__name'>
+                EVERYBODY WINS A PRIZE
+              </span>
+              <div class='episode__rate'>
+                <span class='material-symbols-outlined episode__icon--star'> stars </span>
+                </span>
+                <span class='episode__rating'>7.8</span>
+              </div>
+            </div>
+          </div>
+        </section>";
+      break;
+    case "images":
+      echo " <div class='gallery__images'>
             <img src='{$data[0]['image_path']}' alt='first photo' class='gallery__image gallery__image--main'>
             <img src='{$data[1]['image_path']}' alt='first photo'  class='gallery__image gallery__image--secondary'>
             <img src='{$data[2]['image_path']}' alt='first photo'  class='gallery__image gallery__image--widther'>
@@ -99,6 +132,19 @@ function displayDetails($data, $content)
             <img src='{$data[4]['image_path']}' alt='first photo'  class='gallery__image gallery__image--last'>
           </div>
           <a href='#' class='gallery__more'>Zobacz więcej zdjęć</a>";
-            break;
-    }
+      break;
+    case "trailer":
+      echo "<iframe src='{$data[0]['film_trailer']}' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen class='trailer__film'></iframe>";
+      break;
+    case "cast":
+      foreach ($data as $row) {
+        echo " <div class='actor'>
+          <img src='{$row['actor_image']}' alt='{$row['actor_name']} {$row['actor_surname']} zdjęcie' class='actor__image'>
+          <a href='' class='actor__info actor__info--link actor__info'>{$row['actor_name']} {$row['actor_surname']}</a>
+          <span class='actor__info'>jako</span>
+          <a href='' class='actor__info'>{$row['character_name']}</a>
+        </div>";
+      };
+      break;
+  }
 }
