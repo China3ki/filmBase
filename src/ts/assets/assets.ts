@@ -44,10 +44,22 @@ const showElements = (e: Event) => {
 
 const nextMenu = (e: Event) => {
   const target = e.currentTarget as Element;
+
+  if (target.classList.contains('account__category')) {
+    target.parentElement.querySelector('.login__unwind').classList.add('show');
+    return;
+  }
   target.parentElement.querySelector('.menu__panel--sub').classList.add('show');
 };
 const previousMenu = (e: Event) => {
   const target = e.currentTarget as Element;
+  if (target.classList.contains('login__back')) {
+    target.parentElement.parentElement.parentElement
+      .querySelector('.login__unwind')
+      .classList.remove('show');
+    return;
+  }
+  console.log(target.parentElement.parentElement.parentElement);
   target.parentElement.parentElement.parentElement
     .querySelector('.menu__panel--sub')
     .classList.remove('show');

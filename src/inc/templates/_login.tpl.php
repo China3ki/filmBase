@@ -49,28 +49,68 @@
     </ul>
   </div> -->
   <div class="account account--nonlogged">
-      <div class="account__header">
-          <h2 class="account__title">Konto</h2>
-          <span class="material-symbols-outlined account__icon--close"> close </span>
+    <div class="account__header">
+      <h2 class="account__title">Konto</h2>
+      <span class="material-symbols-outlined account__icon--close"> close </span>
+    </div>
+    <div class="account__main">
+      <div class="account__info">
+        <div class="account__details">
+          <span class="material-symbols-outlined account__icon">
+            account_circle
+          </span>
+        </div>
+        <span class="account__desc">Niezalogowany</span>
       </div>
-      <div class="account__main">
-          <div class="account__info">
-              <div class="account__details">
-                  <span class="material-symbols-outlined account__icon">
-                      account_circle
-                  </span>
-              </div>
-              <span class="account__desc">Niezalogowany</span>
+    </div>
+    <ul class="account__options">
+      <li class="account__option">
+        <div class="account__category list__unwind">
+          <span>Zaloguj się</span><span class="material-symbols-outlined menu__icon--next">
+            login
+          </span>
+        </div>
+      </li>
+      <li class="account__option">
+        <div class="account__category list__unwind">
+          <span>Zarejestruj się</span><span class="material-symbols-outlined"> app_registration </span>
+        </div>
+        <div class="login__unwind ">
+          <div class="login__header">
+            <div class="login__back menu__back">
+              <span class="material-symbols-outlined login__icon--back"> arrow_back </span>
+              <h2 class="login__title">Zarejestruj się</h2>
+            </div>
+            <span class="material-symbols-outlined login__icon--close account__icon--close"> close </span>
           </div>
-      </div>
-      <ul class="account__options">
-          <li class="account__option">
-              Zaloguj się<span class="material-symbols-outlined menu__icon--next">
-                  login
-              </span>
-          </li>
-          <li class="account__option">
-              Zarejestruj się<span class="material-symbols-outlined"> app_registration </span>
-          </li>
-      </ul>
+          <form action="" class="login__form">
+            <div class="login__data">
+              <label for="" class="login__label">Nazwa użytkownika</label>
+              <input type="text" class="login__input">
+            </div>
+            <div class="login__data">
+              <label for="" class="login__label">Imię</label>
+              <input type="text" class="login__input">
+            </div>
+            <div class="login__data">
+              <label for="" class="login__label">Nazwisko</label>
+              <input type="text" class="login__input">
+            </div>
+            <div class="login__data">
+              <label for="" class="login__label">Adres Email</label>
+              <input type="email" name="" id="" class="login__input">
+            </div>
+            <div class="login__data">
+              <label for="" class="login__label">Hasło</label>
+              <input type="password" name="" id="" class="login__input">
+            </div>
+            <div class="login__data">
+              <label for="" class="login__label">Powtórz hasło</label>
+              <input type="password" class="login__input">
+            </div>
+            <input type="submit" value="Zarejestruj się!" class="login__submit">
+          </form>
+        </div>
+      </li>
+    </ul>
   </div>

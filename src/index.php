@@ -17,8 +17,8 @@
 <body>
 
   <?php require("inc/templates/_login.tpl.php") ?>
-  <?php require("inc/templates/_header.tpl.php") ?>
-  <?php require("inc/templates/_nav.tpl.php") ?>
+  <?php require("inc/templates/_header.tpl.html") ?>
+  <?php require("inc/templates/_nav.tpl.html") ?>
 
   <main class="content">
     <section class="articles">

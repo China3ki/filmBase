@@ -114,18 +114,119 @@ html[data-theme=light] {
   color: #9e5df5;
   font-size: 20px;
 }
+.account .account__options {
+  list-style-type: none;
+}
 .account .account__options .account__option {
+  width: 100%;
+  border-bottom: 2px solid var(--color-text);
+}
+.account .account__options .account__option .account__category {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   padding: 10px;
-  border-bottom: 2px solid var(--color-text);
   transition: color 0.2s;
   cursor: pointer;
 }
-.account .account__options .account__option:hover {
+.account .account__options .account__option .account__category:hover {
   color: #9e5df5;
+}
+.account .account__options .account__option .login__unwind {
+  position: absolute;
+  top: 0;
+  background-color: var(--color-background);
+  height: 100%;
+  width: 0%;
+  overflow: hidden;
+  transition: width 0.4s;
+}
+.account .account__options .account__option .login__unwind .login__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+  font-size: 25px;
+}
+.account .account__options .account__option .login__unwind .login__header .login__back {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  padding: 10px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.account .account__options .account__option .login__unwind .login__header .login__back .login__icon--back {
+  font-size: 45px;
+}
+.account .account__options .account__option .login__unwind .login__header .login__back:hover {
+  color: #9e5df5;
+  background-color: rgba(var(--color-textRGB), 0.2);
+}
+.account .account__options .account__option .login__unwind .login__header .login__icon--close {
+  padding: 10px;
+  font-size: 45px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.account .account__options .account__option .login__unwind .login__header .login__icon--close:hover {
+  color: #9e5df5;
+}
+.account .account__options .account__option .login__unwind .login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: 100%;
+  margin-top: 50px;
+}
+.account .account__options .account__option .login__unwind .login__form .login__data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.account .account__options .account__option .login__unwind .login__form .login__data .login__label {
+  font-size: 18px;
+}
+.account .account__options .account__option .login__unwind .login__form .login__data .login__input {
+  height: 50px;
+  width: 300px;
+  align-self: center;
+  background-color: transparent;
+  color: var(--color-text);
+  padding: 10px;
+  padding-bottom: 0;
+  font-size: 20px;
+  border: none;
+}
+.account .account__options .account__option .login__unwind .login__form .login__data .login__input:focus {
+  outline: none;
+}
+.account .account__options .account__option .login__unwind .login__form .login__data:after {
+  content: "";
+  position: relative;
+  bottom: 0px;
+  height: 2px;
+  background: linear-gradient(to left, var(--color-text) 50%, #9e5df5 50%) right;
+  background-size: 200% 100%;
+  transition: background 0.4s;
+}
+.account .account__options .account__option .login__unwind .login__form .login__data.focus:after {
+  background-position: left;
+}
+.account .account__options .account__option .login__unwind .login__form .login__submit {
+  margin-top: 5px;
+  background-color: transparent;
+  color: var(--color-text);
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid var(--color-text);
+  cursor: pointer;
+}
+.account .account__options .account__option .login__unwind.show {
+  width: 100%;
 }
 
 .account.show {

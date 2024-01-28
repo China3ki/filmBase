@@ -16,8 +16,8 @@
 <body>
 
   <?php require("inc/templates/_login.tpl.php") ?>
-  <?php require("inc/templates/_header.tpl.php") ?>
-  <?php require("inc/templates/_nav.tpl.php") ?>
+  <?php require("inc/templates/_header.tpl.html") ?>
+  <?php require("inc/templates/_nav.tpl.html") ?>
   <main class="content">
     <!-- 
     <section class="image">
@@ -86,6 +86,10 @@
       </div>
     </section> -->
     <?php $detailsInstance->filmQuery("main") ?>
+    <?php $detailsInstance->filmQuery("genres") ?>
+    <?php $detailsInstance->filmQuery("productionCountry") ?>
+    <?php $detailsInstance->filmQuery("premier") ?>
+    <?php $detailsInstance->filmQuery("studio") ?>
     <!-- <section class="info">
       <div class="info__all">
         <div class="info__main">
@@ -216,7 +220,8 @@
     <section class="cast">
       <h1 class="cast__title">Postacie</h1>
       <div class="actors">
-        <div class="actor">
+        <?php $detailsInstance->filmQuery("characters") ?>
+        <!-- <div class="actor">
           <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
           <a href="" class="actor__info actor__info--link actor__info--role">Daryl Dixon</a>
         </div>
@@ -235,7 +240,7 @@
         <div class="actor">
           <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
           <a href="" class="actor__info actor__info--link actor__info--role">Daryl Dixon</a>
-        </div>
+        </div> -->
       </div>
       <a href="#" class="cast__more">Zobacz wszystkie role</a>
     </section>
@@ -244,7 +249,8 @@
       <div class="critics">
         <h1 class="critics__title">Opinie krytyków</h1>
         <div class="critics__opinions">
-          <div class="critic__opinion">
+          <?php $detailsInstance->filmQuery("critics") ?>
+          <!-- <div class="critic__opinion">
             <div class="critic__header">
               <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="critic__image">
               <div class="critic__info">
@@ -322,11 +328,13 @@
             </div>
             <p class="critic__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique necessitatibus rem debitis mollitia vel assumenda repellat qui ullam ut voluptatibus molestiae, ipsam ratione, sunt temporibus expedita excepturi minus fuga delectus.</p>
           </div>
+        </div> -->
         </div>
       </div>
       <div class="users__opinions">
         <h1 class="opinions__title">Opinie użytkowników</h1>
         <div class="opinions">
+          <?php $detailsInstance->filmQuery("users") ?>
           <div class="opinion">
             <div class="opinion__header">
               <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="opinion__image">

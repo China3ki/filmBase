@@ -70,25 +70,63 @@ function displayDetails($data, $content)
             </div>
           </section>
           <section class='info'>
-          <div class='info__all'>
-            <div class='info__main'>
-              <img src='{$data[0]['film_cover']}' alt='film cover' class='info__image'>
-              <div class='info__details'>
-                <span class='info__desc'>{$data[0]['film_desc']}</span>  
-              </div>
-            </div>
-            <div class='info__production'>
-              <span class='info__genre'>Gatunek</span>
-              <span>Horror</span>
-              <span class='info__genre'>Produkcja</span>
-              <span>Francja</span>
-              <span class='info__genre'>Premiera</span>
-              <span>20.12.2023</span>
-              <span class='info__genre'>Studio</span>
-              <span>AMC</span>
-            </div>
+      <div class='info__all'>
+        <div class='info__main'>
+          <img src='{$data[0]['film_cover']}' alt='film cover' class='info__image'>
+          <div class='info__details'>
+            <span class='info__desc'>{$data[0]['film_desc']}</span>  
           </div>
-        </section>";
+        </div>
+         ";
+      break;
+    case "info":
+      echo "
+       
+          
+          <span>Horror</span>
+          <span class='info__genre'>Produkcja</span>
+          <span>Francja</span>
+          <span class='info__genre'>Premiera</span>
+          <span>20.12.2023</span>
+          <span class='info__genre'>Studio</span>
+          <span>AMC</span>
+     ";
+      break;
+    case "genres":
+      echo " <div class='info__production'>
+      <span class='info__genre'>Gatunek</span>
+      <span>";
+      foreach ($data as $row) {
+        echo "{$row['genre_name']} ";
+      }
+      echo "</span>";
+      break;
+    case "productionCountry":
+      echo "<span class='info__genre'>Produkcja</span>
+      <span>";
+      foreach ($data as $row) {
+        echo "{$row['country_name']}";
+      }
+      echo "</span>";
+      break;
+    case "premier":
+      echo "<span class='info__genre'>Premiera</span>
+      <span>";
+      foreach ($data as $row) {
+        echo "{$row['date_premier']} ({$row['country_name']})";
+      }
+      echo "</span>";
+      break;
+    case "studio":
+      echo " <span class='info__genre'>Studio</span>
+      <span>";
+      foreach ($data as $row) {
+        echo "{$row['studio_name']}";
+      }
+      echo "</span>
+      </div>
+      </div>
+    </section>";
       break;
     case "episodes":
       echo " <section class='episodes'>
@@ -145,6 +183,75 @@ function displayDetails($data, $content)
           <a href='' class='actor__info'>{$row['character_name']}</a>
         </div>";
       };
+      break;
+    case "characters":
+      foreach ($data as $row) {
+        echo " <div class='actor'>
+          <img src='{$row['character_image']}' alt='{$row['character_name']} zdjęcie' class='actor__image'>
+          <a href='' class='actor__info actor__info--link actor__info--role'>{$row['character_name']}</a></div>";
+      };
+      break;
+    case "critics":
+      foreach ($data as $row) {
+        echo "<div class='critic__opinion'>
+        <div class='critic__header'>
+          <img src='{$row['user_avatar']}' alt='{$row['user_name']} zdjęcie' class='critic__image'>
+          <div class='critic__info'>
+            <span class='critic__name'>{$row['user_name']} {$row['user_surname']}</span>
+            <span class='critic__sub'>12 tys obserwujących</span>
+            <button class='critic__observe'>Obserwuj</button>
+          </div>
+        </div>
+        <div class='critic__rate'>
+          <span class='critic__number'>{$row['rate']}</span>
+          <div class='critic__stars'>";
+        for ($i = 1; $i <= 10; $i++) {
+          if ($i > $row['rate']) {
+            echo " <span class='material-symbols-outlined critic__icon--star'> star </span>";
+          } else {
+            echo " <span class='material-symbols-outlined critic__icon--star fill'> star </span>";
+          }
+        }
+        echo "
+          </div>
+        </div>
+        <p class='critic__desc'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint molestias sapiente aliquid natus atque vel dignissimos animi impedit tempore aliquam perspiciatis, voluptate eaque cupiditate. Quia necessitatibus eum alias fugit delectus magnam qui. Odit magnam deleniti at iure aliquam iste! Vitae, dolore deserunt in earum ipsam reprehenderit dolor pariatur officia. Veniam?.</p>
+      </div>";
+      }
+      break;
+    case "users":
+      foreach ($data as $row) {
+        echo "
+        <div class='opinion'>
+        <div class='opinion__header'>
+        <img src='{$row['user_avatar']}' alt='{$row['user_nick']} awatar' class='opinion__image'>
+        <div class='opinion__user'>
+          <div class='opinion__userInfo'>
+            <span class='opinion__name'>{$row['user_nick']}</span>
+            <span class='opinion__date'>19.01.2024</span>
+          </div>
+          <div class='opinion__rate'>
+            <span class='opinion__rating'>Ocenił(a) na {$row['rate']}</span>
+            <span class='material-symbols-outlined rate__icon--star fill'> star </span>
+          </div>
+        </div>
+      </div>
+      <p class='opinion__desc'>{$row['rate_comment']}</p>
+      <div class='opinion__likes'>
+        <div class='opinion__rateLikes'>
+          <span class='material-symbols-outlined opinion__like--icon'>
+            thumb_up
+          </span>
+          <span class='opinion__likesCounter'>(0)</span>
+          <span class='material-symbols-outlined opinion__like--icon'>
+            thumb_down
+          </span>
+          <span class='opinion__likesCounter'>(0)</span>
+        </div>
+        <button class='opinion__reply'>Odpowiedż</button>
+      </div>
+    </div>";
+      }
       break;
   }
 }
