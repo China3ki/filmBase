@@ -1,4 +1,5 @@
 import { searchEngine } from './search.js';
+import { passwordStrength } from './register.js';
 const showElements = (e: Event) => {
   // e.preventDefault();
   const target = e.target as Element;
@@ -54,9 +55,13 @@ const nextMenu = (e: Event) => {
 const previousMenu = (e: Event) => {
   const target = e.currentTarget as Element;
   if (target.classList.contains('login__back')) {
+    const inputs: NodeList = document.querySelectorAll('.login__input');
     target.parentElement.parentElement.parentElement
       .querySelector('.login__unwind')
       .classList.remove('show');
+    inputs.forEach((input: HTMLInputElement) => {
+      input.value = '';
+    });
     return;
   }
   console.log(target.parentElement.parentElement.parentElement);
@@ -78,5 +83,5 @@ document
   .forEach((list) => list.addEventListener('click', previousMenu));
 
 document.querySelector('.theme').addEventListener('click', changeTheme);
-
+document.querySelector('[name="password"]').addEventListener('input', passwordStrength);
 document.querySelector('.search__input').addEventListener('input', searchEngine);

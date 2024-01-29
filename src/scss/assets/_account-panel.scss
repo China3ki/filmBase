@@ -6,7 +6,7 @@
   height: 100%;
   width: 100%;
   right: 0;
-  transform: translate(100%);
+  // transform: translate(100%);
   z-index: 5;
   transition: all 0.4s;
 
@@ -123,7 +123,7 @@
         top: 0;
         background-color: var(--color-background);
         height: 100%;
-        width: 0%;
+        width: 100%;
         overflow: hidden;
         transition: width 0.4s;
         .login__header {
@@ -212,6 +212,20 @@
             font-size: 18px;
             border: 2px solid var(--color-text);
             cursor: pointer;
+          }
+          .login__strength {
+            display: flex;
+            gap: 5px;
+            font-size: 14px;
+            .login__level.weak {
+              color: red;
+            }
+            .login__level.mid {
+              color: yellow;
+            }
+            .login__level.strong {
+              color: green;
+            }
           }
         }
       }

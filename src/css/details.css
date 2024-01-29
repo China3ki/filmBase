@@ -21,7 +21,6 @@ html[data-theme=light] {
   height: 100%;
   width: 100%;
   right: 0;
-  transform: translate(100%);
   z-index: 5;
   transition: all 0.4s;
 }
@@ -137,7 +136,7 @@ html[data-theme=light] {
   top: 0;
   background-color: var(--color-background);
   height: 100%;
-  width: 0%;
+  width: 100%;
   overflow: hidden;
   transition: width 0.4s;
 }
@@ -224,6 +223,20 @@ html[data-theme=light] {
   font-size: 18px;
   border: 2px solid var(--color-text);
   cursor: pointer;
+}
+.account .account__options .account__option .login__unwind .login__form .login__strength {
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+}
+.account .account__options .account__option .login__unwind .login__form .login__strength .login__level.weak {
+  color: red;
+}
+.account .account__options .account__option .login__unwind .login__form .login__strength .login__level.mid {
+  color: yellow;
+}
+.account .account__options .account__option .login__unwind .login__form .login__strength .login__level.strong {
+  color: green;
 }
 .account .account__options .account__option .login__unwind.show {
   width: 100%;
