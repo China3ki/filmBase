@@ -1,5 +1,5 @@
 import { searchEngine } from './search.js';
-import { passwordStrength } from './register.js';
+import { passwordStrength, registerValid } from './register.js';
 const showElements = (e: Event) => {
   // e.preventDefault();
   const target = e.target as Element;
@@ -84,4 +84,5 @@ document
 
 document.querySelector('.theme').addEventListener('click', changeTheme);
 document.querySelector('[name="password"]').addEventListener('input', passwordStrength);
+document.querySelector('.login__submit--register').addEventListener('click', registerValid);
 document.querySelector('.search__input').addEventListener('input', searchEngine);

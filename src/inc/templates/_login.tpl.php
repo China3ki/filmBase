@@ -103,38 +103,41 @@
             </div>
             <span class="material-symbols-outlined login__icon--close account__icon--close"> close </span>
           </div>
-          <form action="" class="login__form">
+          <form action="inc/assets/register.php" method="POST" class="login__form">
             <div class="login__data">
-              <label for="" class="login__label">Nazwa użytkownika</label>
-              <input type="text" name="nickname" class="login__input login__input--register">
+              <label for="nickname" class="login__label">Nazwa użytkownika</label>
+              <input type="text" name="nickname" id="nickname" maxlength="35" class="login__input login__input--register">
             </div>
             <div class="login__data">
-              <label for="" class="login__label">Imię</label>
-              <input type="text" name="name" class="login__input login__input--register">
+              <label for="name" class="login__label">Imię</label>
+              <input type="text" name="name" id="name" class="login__input login__input--register">
             </div>
             <div class="login__data">
-              <label for="" class="login__label">Nazwisko</label>
-              <input type="text" name="surname" class="login__input login__input--register">
+              <label for="surname" class="login__label">Nazwisko</label>
+              <input type="text" name="surname" id="surname" class="login__input login__input--register">
             </div>
             <div class="login__data">
-              <label for="" class="login__label">Adres Email</label>
-              <input type="email" name="email" id="" class="login__input login__input--register">
+              <label for="email" class="login__label">Adres Email</label>
+              <input type="email" name="email" id="email" class="login__input login__input--register">
             </div>
             <div class="login__data">
-              <label for="" class="login__label">Hasło</label>
-              <input type="password" name="password" id="" class="login__input login__input--register">
+              <label for="password" class="login__label">Hasło</label>
+              <input type="password" name="password" id="password" class="login__input login__input--register">
             </div>
             <div class="login__strength">
               <span class="login__info ">Siła hasła: </span>
-              <span class="login__level strong">Słabe</span>
+              <span class="login__level strong"></span>
             </div>
             <div class="login__data">
-              <label for="" class="login__label">Powtórz hasło</label>
-              <input type="password" name="passwordr" class="login__input login__input--register">
+              <label for="passwordr" class="login__label">Powtórz hasło</label>
+              <input type="password" name="passwordr" id="passwordr" class="login__input login__input--register">
             </div>
-            <input type="submit" value="Zarejestruj się!" class="login__submit">
+            <input type="submit" value="Zarejestruj się!" class="login__submit login__submit--register">
           </form>
         </div>
       </li>
     </ul>
+    <div class="account__messages">
+
+    </div>
   </div>
