@@ -1,5 +1,6 @@
 import { searchEngine } from './search.js';
 import { passwordStrength, registerValid } from './register.js';
+import { login } from './login.js';
 const showElements = (e: Event) => {
   // e.preventDefault();
   const target = e.target as Element;
@@ -64,7 +65,7 @@ const previousMenu = (e: Event) => {
     });
     return;
   }
-  console.log(target.parentElement.parentElement.parentElement);
+
   target.parentElement.parentElement.parentElement
     .querySelector('.menu__panel--sub')
     .classList.remove('show');
@@ -73,7 +74,7 @@ const changeTheme = () => {
   const theme: string = document.documentElement.dataset.theme;
   document.documentElement.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light');
 };
-
+document.querySelector('.login__submit--login').addEventListener('click', login);
 document.querySelector('body').addEventListener('click', showElements);
 document
   .querySelectorAll('.list__unwind')
@@ -83,6 +84,6 @@ document
   .forEach((list) => list.addEventListener('click', previousMenu));
 
 document.querySelector('.theme').addEventListener('click', changeTheme);
-document.querySelector('[name="password"]').addEventListener('input', passwordStrength);
+document.querySelector('#password').addEventListener('input', passwordStrength);
 document.querySelector('.login__submit--register').addEventListener('click', registerValid);
 document.querySelector('.search__input').addEventListener('input', searchEngine);

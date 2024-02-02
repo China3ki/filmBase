@@ -77,16 +77,16 @@
             </div>
             <span class="material-symbols-outlined login__icon--close account__icon--close"> close </span>
           </div>
-          <form action="" class="login__form">
+          <form action="inc/assets/login.php" method="POST" class="login__form login__form--login">
             <div class="login__data">
-              <label for="" class="login__label">Nazwa użytkownika lub email</label>
-              <input type="text" class="login__input">
+              <label for="loginName" class="login__label">Adres Email</label>
+              <input type="text" id="loginEmail" placeholder="Email" name="email" class="login__input login__input--login">
             </div>
             <div class="login__data">
-              <label for="" class="login__label">Hasło</label>
-              <input type="password" class="login__input">
+              <label for="passwordLogin" class="login__label">Hasło</label>
+              <input type="password" id='passwordLogin' placeholder="Hasło" name='password' class=" login__input login__input--login">
             </div>
-            <input type="submit" value="Zaloguj się" class="login__submit">
+            <input type="submit" value="Zaloguj się" class=" login__submit login__submit--login">
           </form>
         </div>
       </li>
@@ -103,26 +103,26 @@
             </div>
             <span class="material-symbols-outlined login__icon--close account__icon--close"> close </span>
           </div>
-          <form action="inc/assets/register.php" method="POST" class="login__form">
+          <form action="inc/assets/register.php" method="POST" class="login__form login__form--register">
             <div class="login__data">
               <label for="nickname" class="login__label">Nazwa użytkownika</label>
-              <input type="text" name="nickname" id="nickname" maxlength="35" class="login__input login__input--register">
+              <input type="text" name="nickname" id="nickname" placeholder="Nazwa użytkownika" maxlength="35" class="login__input login__input--register">
             </div>
             <div class="login__data">
               <label for="name" class="login__label">Imię</label>
-              <input type="text" name="name" id="name" class="login__input login__input--register">
+              <input type="text" name="name" id="name" placeholder="Imię" class="login__input login__input--register">
             </div>
             <div class="login__data">
               <label for="surname" class="login__label">Nazwisko</label>
-              <input type="text" name="surname" id="surname" class="login__input login__input--register">
+              <input type="text" name="surname" id="surname" placeholder="Nazwisko" class="login__input login__input--register">
             </div>
             <div class="login__data">
               <label for="email" class="login__label">Adres Email</label>
-              <input type="email" name="email" id="email" class="login__input login__input--register">
+              <input type="email" name="email" id="email" placeholder="Email" class="login__input login__input--register">
             </div>
             <div class="login__data">
               <label for="password" class="login__label">Hasło</label>
-              <input type="password" name="password" id="password" class="login__input login__input--register">
+              <input type="password" name="password" id="password" placeholder="Hasło" class="login__input login__input--register">
             </div>
             <div class="login__strength">
               <span class="login__info ">Siła hasła: </span>
@@ -130,7 +130,7 @@
             </div>
             <div class="login__data">
               <label for="passwordr" class="login__label">Powtórz hasło</label>
-              <input type="password" name="passwordr" id="passwordr" class="login__input login__input--register">
+              <input type="password" name="passwordr" id="passwordr" placeholder="Powtórz hasło" class="login__input login__input--register">
             </div>
             <input type="submit" value="Zarejestruj się!" class="login__submit login__submit--register">
           </form>

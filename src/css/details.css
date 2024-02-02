@@ -21,6 +21,7 @@ html[data-theme=light] {
   height: 100%;
   width: 100%;
   right: 0;
+  transform: translate(100%);
   z-index: 5;
   transition: all 0.4s;
 }
@@ -136,7 +137,7 @@ html[data-theme=light] {
   top: 0;
   background-color: var(--color-background);
   height: 100%;
-  width: 100%;
+  width: 0%;
   overflow: hidden;
   transition: width 0.4s;
 }

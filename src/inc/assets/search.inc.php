@@ -27,7 +27,8 @@ function searchEngine($data)
   $stmtFilms->bind_param('sssss', $param, $param, $param, $param, $param);
   $stmtFilms->execute();
   $dataFilms = $stmtFilms->get_result()->fetch_all(MYSQLI_ASSOC);
-
+  $stmtFilms->close();
+  $conn->close();
   echo json_encode($dataFilms);
 }
 
