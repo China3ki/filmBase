@@ -1,5 +1,5 @@
 <?php require("inc/index/index.inc.php") ?>
-
+<?php require("inc/assets/display_user_content.inc.php") ?>
 <!DOCTYPE html>
 <html lang="pl" data-theme="dark">
 
@@ -16,7 +16,7 @@
 
 <body>
 
-  <?php require("inc/templates/_login.tpl.php") ?>
+  <?php getUserPanel()  ?>
   <?php require("inc/templates/_header.tpl.html") ?>
   <?php require("inc/templates/_nav.tpl.html") ?>
 

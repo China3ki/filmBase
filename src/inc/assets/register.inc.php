@@ -1,4 +1,5 @@
 <?php
+
 require("conn.inc.php");
 
 function validData(array $data)
@@ -12,7 +13,7 @@ function validData(array $data)
     }
 
     if ($checkAllValid === count($validArray)) registerUser($data);
-    else header("location: ../../index.php?dzialaa");
+    else header("location: ../../index.php?dzialaa"); // Usunąć to działa
 }
 
 function validBasicData(array $infos)
@@ -77,12 +78,11 @@ function registerUser($data)
     $surname = htmlspecialchars($data['surname']);
     $email = $data['email'];
     $password = hash("sha256", $data['password']);
-
-    $stmtRegister = $conn->prepare("INSERT INTO users (user_name, user_surname, user_nick, user_email, fk_user_type ,user_password) VALUES (?,?,?,?,1,?)");
-    $stmtRegister->bind_param('sssss', $name, $surname, $nickname, $email,  $password);
+    $stmtRegister = $conn->prepare("INSERT INTO users (user_name, user_surname, user_nick, user_email, fk_user_type ,user_password, user_avatar, user_background) VALUES (?,?,?,?,1,?)");
+    $stmtRegister->bind_param('sssss', $name, $surname, $nickname, $email, $password);
     $stmtRegister->execute();
     $stmtRegister->close();
-    header("location: ../../index.php?dziala");
+    header("location: ../../index.php?dziala"); // Usunąć to działa
     $conn->close();
 }
 

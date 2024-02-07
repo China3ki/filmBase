@@ -74,7 +74,14 @@ const changeTheme = () => {
   const theme: string = document.documentElement.dataset.theme;
   document.documentElement.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light');
 };
-document.querySelector('.login__submit--login').addEventListener('click', login);
+const logged = () => {
+  if (document.querySelector('#password') !== null) {
+    document.querySelector('.login__submit--login').addEventListener('click', login);
+    document.querySelector('#password').addEventListener('input', passwordStrength);
+    document.querySelector('.login__submit--register').addEventListener('click', registerValid);
+  }
+};
+window.addEventListener('load', logged);
 document.querySelector('body').addEventListener('click', showElements);
 document
   .querySelectorAll('.list__unwind')
@@ -84,6 +91,5 @@ document
   .forEach((list) => list.addEventListener('click', previousMenu));
 
 document.querySelector('.theme').addEventListener('click', changeTheme);
-document.querySelector('#password').addEventListener('input', passwordStrength);
-document.querySelector('.login__submit--register').addEventListener('click', registerValid);
+
 document.querySelector('.search__input').addEventListener('input', searchEngine);

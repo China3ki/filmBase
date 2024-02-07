@@ -73,6 +73,10 @@ html[data-theme=light] {
   border-radius: 50%;
   object-fit: cover;
 }
+.account .account__main .account__info .account__details .account__avatar--default {
+  font-size: 120px;
+  color: white;
+}
 .account .account__main .account__info .account__details .account__data {
   display: flex;
   flex-direction: column;
@@ -126,6 +130,7 @@ html[data-theme=light] {
   justify-content: space-between;
   width: 100%;
   padding: 10px;
+  color: var(--color-text);
   transition: color 0.2s;
   cursor: pointer;
 }

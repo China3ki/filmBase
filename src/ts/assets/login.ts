@@ -4,7 +4,7 @@ export const login = async (e) => {
   e.preventDefault();
   const loginForm: HTMLFormElement = document.querySelector('.login__form--login');
   const pswdInput: HTMLInputElement = document.querySelector('#passwordLogin');
-  const emailInput: HTMLInputElement = document.querySelector('#loginEmail');
+  const emailInput: HTMLInputElement = document.querySelector('#emailLogin');
   const emailExist: boolean | string = await accountExist(emailInput.value);
   const pswdExist: boolean | string = await pswdCorrect(pswdInput.value, emailInput.value);
   if (emailExist !== true) return errorMessage(emailExist);
@@ -16,12 +16,11 @@ export const login = async (e) => {
 };
 const pswdCorrect = async (pswd: string, email: string) => {
   const pswdCheck = new FormData();
-  pswdCheck.append('password', pswd);
-  pswdCheck.append('email', email);
+  pswdCheck.append('passwordLogin', pswd);
+  pswdCheck.append('emailLogin', email);
   pswdCheck.append('check', 'true');
-
   try {
-    const check = await fetch('inc/assets/login.php', {
+    const check = await fetch('inc/assets/login.inc.php', {
       body: pswdCheck,
       method: 'POST',
     });
@@ -37,7 +36,7 @@ const accountExist = async (email: string) => {
   const data = new FormData();
   data.append('email', email);
   try {
-    const account = await fetch('inc/assets/login.php', {
+    const account = await fetch('inc/assets/login.inc.php', {
       body: data,
       method: 'POST',
     });

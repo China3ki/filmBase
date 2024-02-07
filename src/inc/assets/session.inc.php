@@ -1,6 +1,6 @@
 <?php
 
-function startSession($id, $name, $surname, $nickname, $email)
+function startSession($id, $name, $surname, $nickname, $email, $avatar, $background)
 {
     session_start();
     $_SESSION['id'] = $id;
@@ -8,6 +8,8 @@ function startSession($id, $name, $surname, $nickname, $email)
     $_SESSION['surname'] = $surname;
     $_SESSION['nickname'] = $nickname;
     $_SESSION['email'] = $email;
+    $_SESSION['avatar'] = $avatar;
+    $_SESSION['background'] = $background;
 }
 
 function continueSession()
@@ -17,5 +19,9 @@ function continueSession()
 
 function destroySession()
 {
+    session_start();
+    session_unset();
     session_destroy();
+    header("location: ../../index.php");
 }
+if (isset($_GET['logout'])) destroySession();

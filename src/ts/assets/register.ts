@@ -56,15 +56,14 @@ const validBasicData = () => {
 export const passwordStrength = () => {
   const inputPswd: HTMLInputElement = document.querySelector('#password');
   const showPswdLevel: HTMLElement = document.querySelector('.login__level');
+  const pswdReg: RegExp = /[-._!"`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|]+/;
   showPswdLevel.classList.remove('weak');
   showPswdLevel.classList.remove('mid');
   showPswdLevel.classList.remove('strong');
   if (
     inputPswd.value.length >= 8 &&
-    ((inputPswd.value.match(/[A-Z]/) &&
-      !inputPswd.value.match(/[-._!"`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|]+/)) ||
-      (!inputPswd.value.match(/[A-Z]/) &&
-        inputPswd.value.match(/[-._!"`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|]+/)))
+    ((inputPswd.value.match(/[A-Z]/) && !inputPswd.value.match(pswdReg)) ||
+      (!inputPswd.value.match(/[A-Z]/) && inputPswd.value.match(pswdReg)))
   ) {
     showPswdLevel.classList.add('mid');
     showPswdLevel.textContent = 'Średnie';
@@ -73,7 +72,7 @@ export const passwordStrength = () => {
   } else if (
     inputPswd.value.length >= 8 &&
     inputPswd.value.match(/[A-Z]/) &&
-    inputPswd.value.match(/[-._!"`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|]+/)
+    inputPswd.value.match(pswdReg)
   ) {
     showPswdLevel.classList.add('strong');
     showPswdLevel.textContent = 'Silne';
@@ -90,7 +89,7 @@ const emailExits = async (email) => {
   const data = new FormData();
   data.append('checkEmail', email);
   try {
-    const checkEmail = await fetch('inc/assets/register.php', {
+    const checkEmail = await fetch('inc/assets/register.inc.php', {
       body: data,
       method: 'POST',
     });

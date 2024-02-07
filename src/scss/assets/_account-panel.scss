@@ -56,6 +56,10 @@
           border-radius: 50%;
           object-fit: cover;
         }
+        .account__avatar--default {
+          font-size: 120px;
+          color: white;
+        }
         .account__data {
           display: flex;
           flex-direction: column;
@@ -112,6 +116,7 @@
         justify-content: space-between;
         width: 100%;
         padding: 10px;
+        color: var(--color-text);
         transition: color 0.2s;
         cursor: pointer;
       }
