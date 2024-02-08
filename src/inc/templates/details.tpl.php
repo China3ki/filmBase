@@ -5,7 +5,7 @@ function displayDetails($data, $content)
   switch ($content) {
     case "main":
       echo "<section class='image'>
-            <img src='{$data[0]['film_cover_widther']}' alt='film Cover widther' class='image__main'>
+            <img src='{$data[0]['film_cover_widther']}' alt='Film cover background' class='image__main'>
             <div class='image__title'>
               <span class='title__type'>FILM</span>
               <span class='title__name'>{$data[0]['film_name']}</span>
@@ -17,14 +17,17 @@ function displayDetails($data, $content)
                     <span class='image__rating'>{$data[0]['rate']}</span>
                     <span class='image__numbers'>{$data[0]['count']} ocen</span>
                   </div>
-      
                 </div>
                 <span class='image__length'>{$data[0]['film_length']} min</span>
                 <div class='image__wantWatch'>
-                  <span class='material-symbols-outlined image__heart--icon'>
+                  <span  data-type = 'like' class='material-symbols-outlined image__icon'>
                     favorite
                   </span>
-                  <span class='image__want'>Chcę obejrzeć</span>
+                  <span class='image__want'>Lubię to</span>
+                </div>
+                <div class = 'image__wantWatch'>
+                <span data-type = 'watch' class='material-symbols-outlined image__icon'>visibility</span>
+                <span  class='image__want'>Chcę obejrzeć</span>
                 </div>
               </div>
               <div class='user__rate'>
@@ -81,8 +84,6 @@ function displayDetails($data, $content)
       break;
     case "info":
       echo "
-       
-          
           <span>Horror</span>
           <span class='info__genre'>Produkcja</span>
           <span>Francja</span>

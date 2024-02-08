@@ -1,3 +1,4 @@
+import { messageInfo } from './error.js';
 export const registerValid = async (e) => {
   e.preventDefault();
   const formInput: HTMLFormElement = document.querySelector('.login__form--register');
@@ -11,7 +12,7 @@ export const registerValid = async (e) => {
   let check: number = 0;
   conditionsArray.forEach((condition) => {
     if (condition !== true) {
-      return errorMessage(condition);
+      return messageInfo(condition);
     } else {
       check++;
     }
@@ -20,29 +21,7 @@ export const registerValid = async (e) => {
     formInput.submit();
   }
 };
-export let removeTimeout;
-export const errorMessage = (message: string) => {
-  const accountMessages: HTMLElement = document.querySelector('.account__messages');
-  const accountMessage: HTMLElement = document.createElement('div');
-  const messageIcon: HTMLElement = document.createElement('span');
-  const messageInfo: HTMLElement = document.createElement('span');
-  const emptySpan: HTMLElement = document.createElement('span');
 
-  accountMessage.classList.add('account__message');
-  messageIcon.classList.add('material-symbols-outlined', 'message__icon');
-  messageInfo.classList.add('message__info');
-
-  messageInfo.textContent = message;
-  messageIcon.textContent = 'cancel';
-  removeTimeout = clearTimeout(removeTimeout);
-  accountMessages.appendChild(accountMessage);
-  accountMessage.appendChild(messageIcon);
-  accountMessage.appendChild(messageInfo);
-  accountMessage.appendChild(emptySpan);
-  removeTimeout = setTimeout(() => {
-    accountMessages.replaceChildren();
-  }, 3200);
-};
 const validBasicData = () => {
   const allInputs: NodeList = document.querySelectorAll('.login__input--register');
   let checkInput: number = 0;

@@ -87,7 +87,5 @@
       </div>
     </li>
   </ul>
-  <div class="account__messages">
 
-  </div>
 </div>

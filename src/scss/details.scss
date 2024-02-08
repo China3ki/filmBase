@@ -73,14 +73,20 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          .image__heart--icon {
+          .image__icon {
             font-size: 20px;
             cursor: pointer;
           }
           .image__want {
             font-size: 13px;
+            color: rgba(255, 255, 255, 0.8);
           }
-          .image__heart--icon:hover {
+          .image__icon.watch {
+            font-variation-settings: 'FILL' 1;
+            color: $secondory-color;
+            transition: color 0.2s;
+          }
+          .image__icon:hover {
             font-variation-settings: 'FILL' 1;
             color: $secondory-color;
           }

@@ -1,4 +1,4 @@
-import { errorMessage } from './register.js';
+import { messageInfo } from './error.js';
 
 export const login = async (e) => {
   e.preventDefault();
@@ -7,9 +7,9 @@ export const login = async (e) => {
   const emailInput: HTMLInputElement = document.querySelector('#emailLogin');
   const emailExist: boolean | string = await accountExist(emailInput.value);
   const pswdExist: boolean | string = await pswdCorrect(pswdInput.value, emailInput.value);
-  if (emailExist !== true) return errorMessage(emailExist);
+  if (emailExist !== true) return messageInfo(emailExist);
   if (pswdExist !== true) {
-    return errorMessage(pswdExist);
+    return messageInfo(pswdExist);
   } else {
     loginForm.submit();
   }

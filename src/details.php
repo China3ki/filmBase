@@ -1,4 +1,4 @@
-<?php require("inc/index/details.inc.php") ?>
+<?php require("inc/details/details.inc.php") ?>
 <?php require("inc/assets/display_user_content.inc.php") ?>
 <!DOCTYPE html>
 <html lang="pl" data-theme="dark">
@@ -9,7 +9,7 @@
   <title>FilmBase</title>
   <link rel="stylesheet" href="css/details.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script src="js/details.js" defer></script>
+  <script type="module" src="js/details.js" defer></script>
   <script type="module" src="js/assets/assets.js" defer></script>
   <script src="https://kit.fontawesome.com/e348b353f1.js" crossorigin="anonymous"></script>
 </head>
@@ -17,7 +17,7 @@
 <body>
 
   <?php getUserPanel()  ?>
-  <?php require("inc/templates/_header.tpl.html") ?>
+  <?php require("inc/templates/_header.tpl.php") ?>
   <?php require("inc/templates/_nav.tpl.html") ?>
   <main class="content">
     <!-- 

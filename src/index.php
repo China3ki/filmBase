@@ -17,7 +17,7 @@
 <body>
 
   <?php getUserPanel()  ?>
-  <?php require("inc/templates/_header.tpl.html") ?>
+  <?php require("inc/templates/_header.tpl.php") ?>
   <?php require("inc/templates/_nav.tpl.html") ?>
 
   <main class="content">

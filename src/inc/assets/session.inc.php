@@ -1,6 +1,6 @@
 <?php
 
-function startSession($id, $name, $surname, $nickname, $email, $avatar, $background)
+function startSession($id, $name, $surname, $nickname, $email, $desc, $avatar, $background)
 {
     session_start();
     $_SESSION['id'] = $id;
@@ -8,6 +8,7 @@ function startSession($id, $name, $surname, $nickname, $email, $avatar, $backgro
     $_SESSION['surname'] = $surname;
     $_SESSION['nickname'] = $nickname;
     $_SESSION['email'] = $email;
+    $_SESSION['desc'] = $desc;
     $_SESSION['avatar'] = $avatar;
     $_SESSION['background'] = $background;
 }

@@ -21,9 +21,7 @@ function displayUserPanel()
                     <span class='account__observe'>Obserwacje: 20</span>
                 </div>
             </div>
-            <span class='account__desc'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro repudiandae eveniet
-                aliquid amet possimus quis veniam obcaecati cupiditate itaque aperiam tempora, voluptate
-                hic? Sit minus similique animi sint. Inventore, possimus!</span>
+            <span class='account__desc'>{$_SESSION['desc']}</span>
         </div>
     </div>
     <ul class='account__stats'>
