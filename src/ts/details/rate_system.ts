@@ -62,20 +62,21 @@ export const resetOpinion = (e) => {
 
 export const watchAndLike = async (e) => {
   const type: string = e.target.dataset.type;
-  const urlParam = new URLSearchParams(window.location.search);
+  const searchLocation = window.location.search;
+  const urlParam = new URLSearchParams(searchLocation);
   const data = new FormData();
   data.append('type', type);
   data.append('name', urlParam.get('name'));
   try {
-    const addLikesOrWatch = await fetch('inc/details/likes_watch.inc.php', {
+    const addLikesOrWatch = await fetch(`inc/details/details.inc.php${searchLocation}`, {
       method: 'POST',
       body: data,
     });
     if (!addLikesOrWatch.ok) throw new Error('Coś poszło nie tak. Spróbuj ponownie póżniej!');
 
-    return messageInfo(await addLikesOrWatch.text());
+    return messageInfo(await addLikesOrWatch.text(), 'done');
   } catch (error) {
-    return messageInfo(error);
+    return messageInfo(error, 'error');
   } finally {
     e.target.classList.toggle('watch');
   }

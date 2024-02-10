@@ -54,9 +54,11 @@ function displayUserPanel()
             </div>
         </li>
         <li class='account__option'>
-            <a href='inc/assets/session.inc.php?logout' class='account__category list__unwind'>
+            <form method = 'POST' action = 'inc/assets/session.inc.php' class='account__category account__category--form list__unwind'>
+                <button name='logout' class='account__logout'>
                 <span>Wyloguj</span> <span class='material-symbols-outlined'> logout </span>
-            </a>
+                </button>
+            </form>
         </li>
     </ul>
 </div>";

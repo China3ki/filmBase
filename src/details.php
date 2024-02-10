@@ -86,11 +86,16 @@
         </div>
       </div>
     </section> -->
-    <?php $detailsInstance->filmQuery("main") ?>
-    <?php $detailsInstance->filmQuery("genres") ?>
-    <?php $detailsInstance->filmQuery("productionCountry") ?>
-    <?php $detailsInstance->filmQuery("premier") ?>
-    <?php $detailsInstance->filmQuery("studio") ?>
+    <?php $detailsInstance->renderFilms("main")
+    ?>
+    <?php $detailsInstance->renderFilms("genres")
+    ?>
+    <?php $detailsInstance->renderFilms("productionCountry")
+    ?>
+    <?php $detailsInstance->renderFilms("premier")
+    ?>
+    <?php $detailsInstance->renderFilms("studio")
+    ?>
     <!-- <section class="info">
       <div class="info__all">
         <div class="info__main">
@@ -158,7 +163,8 @@
     </section> -->
     <section class="gallery">
       <h1 class="gallery__title">Galeria zdjęciowa </h1>
-      <?php $detailsInstance->filmQuery("images") ?>
+      <?php $detailsInstance->renderFilms("images")
+      ?>
       <!-- <div class="gallery__images">
         <img src="images/long.jpg" alt="" class="gallery__image gallery__image--main">
         <img src="images/daryl.jpg" alt="" class="gallery__image gallery__image--secondary">
@@ -170,13 +176,15 @@
     </section>
     <section class="trailer">
       <h1 class="trailer__title">Trailer</h1>
-      <?php $detailsInstance->filmQuery("trailer") ?>
+      <?php //$detailsInstance->filmQuery("trailer") 
+      ?>
       <!-- <iframe src="https://www.youtube.com/embed/iId5WDsYxZ4?si=c5j-Bi2FcKfoK62i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="trailer__film"></iframe> -->
     </section>
     <section class="cast">
       <h1 class="cast__title">Obsada</h1>
       <div class="actors">
-        <?php $detailsInstance->filmQuery("cast") ?>
+        <?php $detailsInstance->renderFilms("cast")
+        ?>
         <!-- <div class="actor">
           <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
           <a href="" class="actor__info actor__info--link actor__info">Norman Reedus</a>
@@ -221,7 +229,8 @@
     <section class="cast">
       <h1 class="cast__title">Postacie</h1>
       <div class="actors">
-        <?php $detailsInstance->filmQuery("characters") ?>
+        <?php $detailsInstance->renderFilms("characters")
+        ?>
         <!-- <div class="actor">
           <img src="images/actors/normanreedus/img.jpg" alt="" class="actor__image">
           <a href="" class="actor__info actor__info--link actor__info--role">Daryl Dixon</a>
@@ -250,7 +259,8 @@
       <div class="critics">
         <h1 class="critics__title">Opinie krytyków</h1>
         <div class="critics__opinions">
-          <?php $detailsInstance->filmQuery("critics") ?>
+          <?php $detailsInstance->renderFilms("critics")
+          ?>
           <!-- <div class="critic__opinion">
             <div class="critic__header">
               <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="critic__image">
@@ -335,7 +345,8 @@
       <div class="users__opinions">
         <h1 class="opinions__title">Opinie użytkowników</h1>
         <div class="opinions">
-          <?php $detailsInstance->filmQuery("users") ?>
+          <?php //$detailsInstance->filmQuery("users") 
+          ?>
           <div class="opinion">
             <div class="opinion__header">
               <img src="images/actors/andrewlincoln/andrew.jpg" alt="" class="opinion__image">

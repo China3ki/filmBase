@@ -1,10 +1,10 @@
 <?php
 
-function displayDetails($data, $content)
+function displayDetails($data, $like, $watch, $content)
 {
   switch ($content) {
     case "main":
-      echo "<section class='image'>
+      echo  "<section class='image'>
             <img src='{$data[0]['film_cover_widther']}' alt='Film cover background' class='image__main'>
             <div class='image__title'>
               <span class='title__type'>FILM</span>
@@ -19,14 +19,17 @@ function displayDetails($data, $content)
                   </div>
                 </div>
                 <span class='image__length'>{$data[0]['film_length']} min</span>
-                <div class='image__wantWatch'>
-                  <span  data-type = 'like' class='material-symbols-outlined image__icon'>
-                    favorite
-                  </span>
-                  <span class='image__want'>Lubię to</span>
-                </div>
-                <div class = 'image__wantWatch'>
-                <span data-type = 'watch' class='material-symbols-outlined image__icon'>visibility</span>
+                <div class='image__wantWatch'>";
+      if ($like === true) echo "  <span  data-type = 'like' class='material-symbols-outlined image__icon watch'>favorite</span>";
+
+      else echo "  <span  data-type = 'like' class='material-symbols-outlined image__icon'>favorite</span>";
+
+      echo " <span class='image__want'>Lubię to</span>
+    </div>
+                <div class = 'image__wantWatch'>";
+      if ($watch === true) echo "<span data-type = 'watch' class='material-symbols-outlined image__icon watch'>visibility</span>";
+      else echo "<span data-type = 'watch' class='material-symbols-outlined image__icon'>visibility</span>";
+      echo "
                 <span  class='image__want'>Chcę obejrzeć</span>
                 </div>
               </div>
@@ -84,6 +87,7 @@ function displayDetails($data, $content)
       break;
     case "info":
       echo "
+
           <span>Horror</span>
           <span class='info__genre'>Produkcja</span>
           <span>Francja</span>

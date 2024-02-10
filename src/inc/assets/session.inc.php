@@ -25,4 +25,4 @@ function destroySession()
     session_destroy();
     header("location: ../../index.php");
 }
-if (isset($_GET['logout'])) destroySession();
+if (isset($_POST['logout'])) destroySession();

@@ -134,6 +134,26 @@ html[data-theme=light] {
   transition: color 0.2s;
   cursor: pointer;
 }
+.account .account__options .account__option .account__category--form {
+  padding: 0 !important;
+}
+.account .account__options .account__option .account__category--form .account__logout {
+  width: 100%;
+  background: transparent;
+  color: var(--color-text);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+.account .account__options .account__option .account__category--form .account__logout * {
+  transition: color 0.2s;
+}
+.account .account__options .account__option .account__category--form .account__logout:hover * {
+  color: #9e5df5;
+}
 .account .account__options .account__option .account__category:hover {
   color: #9e5df5;
 }
@@ -345,8 +365,8 @@ html[data-theme=light] {
   font-size: 35px;
 }
 .header .icon__set .header__icon--avatar {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   object-fit: cover;
   transition: opacity 0.2s;
@@ -844,7 +864,6 @@ body {
   align-items: center;
   gap: 5px;
   opacity: 0;
-  background-color: rgba(233, 68, 68, 0.9);
   max-width: 350px;
   padding: 10px;
   text-align: center;
@@ -855,6 +874,12 @@ body {
 }
 .account__messages .account__message .message__info {
   text-align: center;
+}
+.account__messages .account__message.error {
+  background-color: rgba(233, 68, 68, 0.9);
+}
+.account__messages .account__message.done {
+  background-color: rgba(0, 128, 0, 0.9);
 }
 @keyframes show {
   from {
@@ -955,6 +980,7 @@ body {
 }
 .content .image .image__title .image__stats .image__wantWatch .image__icon {
   font-size: 20px;
+  user-select: none;
   cursor: pointer;
 }
 .content .image .image__title .image__stats .image__wantWatch .image__want {
@@ -964,11 +990,22 @@ body {
 .content .image .image__title .image__stats .image__wantWatch .image__icon.watch {
   font-variation-settings: "FILL" 1;
   color: #9e5df5;
-  transition: color 0.2s;
+  animation: watch 0.6s;
+}
+@keyframes watch {
+  0% {
+    transform: scale(1, 1);
+    color: white;
+  }
+  50% {
+    transform: scale(-1.6, 1.6);
+  }
+  100% {
+    transform: scale(-1, 1);
+  }
 }
 .content .image .image__title .image__stats .image__wantWatch .image__icon:hover {
   font-variation-settings: "FILL" 1;
-  color: #9e5df5;
 }
 .content .image .user__rate {
   position: absolute;

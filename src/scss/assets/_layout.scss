@@ -56,7 +56,6 @@ body {
     align-items: center;
     gap: 5px;
     opacity: 0;
-    background-color: rgba(rgb(233, 68, 68), 0.9);
     max-width: 350px;
     padding: 10px;
     text-align: center;
@@ -68,6 +67,12 @@ body {
     .message__info {
       text-align: center;
     }
+  }
+  .account__message.error {
+    background-color: rgba(rgb(233, 68, 68), 0.9);
+  }
+  .account__message.done {
+    background-color: rgba(rgb(0, 128, 0), 0.9);
   }
   @keyframes show {
     from {

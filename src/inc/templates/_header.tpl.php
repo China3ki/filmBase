@@ -18,8 +18,12 @@ echo "<header class='header'>
     <span class='icon__caption'>Wyszukaj</span>
   </div>
   <div class='icon__set icon__set--login'>";
-if (isset($_SESSION['id']) && $_SESSION['avatar'] === '') echo "<span class='material-symbols-outlined header__icon header__icon--login'> account_circle</span>";
-else if (isset($_SESSION['id']) && $_SESSION['avatar'] !== '') echo "<img src='{$_SESSION['avatar']}' alt='{$_SESSION['nickname']} avatar menu' class='header__icon header__icon--avatar header__icon--login'";
+if (isset($_SESSION['id']) && $_SESSION['avatar'] === '') echo "<span class='material-symbols-outlined header__icon header__icon--login'> account_circle</span>
+<span class='icon__caption'>{$_SESSION['name']} {$_SESSION['surname']}</span>
+";
+else if (isset($_SESSION['id']) && $_SESSION['avatar'] !== '') echo "<img src='{$_SESSION['avatar']}' alt='{$_SESSION['nickname']} avatar menu' class='header__icon header__icon--avatar header__icon--login'>
+<span class='icon__caption'>{$_SESSION['name']} {$_SESSION['surname']}</span>
+";
 else  echo "<span class='material-symbols-outlined header__icon header__icon--login'> person </span>  <span class='icon__caption'>Zaloguj się</span>";
 echo "
   </div>

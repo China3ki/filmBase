@@ -12,7 +12,7 @@ export const registerValid = async (e) => {
   let check: number = 0;
   conditionsArray.forEach((condition) => {
     if (condition !== true) {
-      return messageInfo(condition);
+      return messageInfo(condition, 'error');
     } else {
       check++;
     }
